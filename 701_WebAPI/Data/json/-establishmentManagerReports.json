@@ -1,0 +1,53 @@
+{
+  "establishments": [
+    {
+      "establishment": "waikiwi",
+      "reports": [
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/09/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/10/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        },
+        {
+          "fileName": "Establishment Manager Report - Waikiwi - 01/11/2022",
+          "downloadLocation": "https://corporatebs-generator.sameerkumar.website/"
+        }
+      ]
+    },
+    {
+      "establishment": "empty",
+      "reports": []
+    }
+  ]
+}

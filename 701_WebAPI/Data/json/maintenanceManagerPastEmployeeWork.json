@@ -1,0 +1,40 @@
+{
+  "previousJobs": [
+    {
+      "location": "Waikiwi",
+      "jobInfo": {
+        "workDoneBy": "Rickelle Dempster",
+        "workType": "Painting",
+        "date": "05/06/2022",
+        "jobStarted": "8:00am"
+      }
+    },
+    {
+      "location": "Ascot",
+      "jobInfo": {
+        "workDoneBy": "Brent Mallon",
+        "workType": "Beer Servicemen",
+        "date": "07/06/2022",
+        "jobStarted": "11:45am"
+      }
+    },
+    {
+      "location": "Ascot",
+      "jobInfo": {
+        "workDoneBy": "Brent Mallon",
+        "workType": "Beer Servicemen",
+        "date": "09/06/2022",
+        "jobStarted": "10:00am"
+      }
+    },
+    {
+      "location": "The Langlands",
+      "jobInfo": {
+        "workDoneBy": "Brian Walker",
+        "workType": "Painting",
+        "date": "05/06/2022",
+        "jobStarted": "8:00am"
+      }
+    }
+  ]
+}

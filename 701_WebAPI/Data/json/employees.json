@@ -1,0 +1,730 @@
+{
+  "employees": [
+    {
+      "surname": "Dempster",
+      "firstname": "Rickelle",
+      "trade": "Painter",
+      "rate": "50.00",
+      "overtimeRate": "00.00",
+      "jobSheets": [
+        {
+          "filename": "Job Sheet - Rickelle Dempster - 08/06/2022",
+          "dateUploaded": "08/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "3"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "4"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Rickelle Dempster - 15/06/2022",
+          "dateUploaded": "15/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Rickelle Dempster - 22/06/2022",
+          "dateUploaded": "22/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Rickelle Dempster - 28/06/2022",
+          "dateUploaded": "28/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surname": "Dimmock",
+      "firstname": "Wayne",
+      "trade": "Carpenter",
+      "rate": "50.00",
+      "overtimeRate": "00.00",
+      "jobSheets": [
+        {
+          "filename": "Job Sheet - Wayne Dimmock - 08/06/2022",
+          "dateUploaded": "08/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Wayne Dimmock - 15/06/2022",
+          "dateUploaded": "15/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Wayne Dimmock - 22/06/2022",
+          "dateUploaded": "22/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Wayne Dimmock - 28/06/2022",
+          "dateUploaded": "28/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surname": "Mallon",
+      "firstname": "Brent",
+      "trade": "Plumber",
+      "rate": "50.00",
+      "overtimeRate": "00.00",
+      "jobSheets": [
+        {
+          "filename": "Job Sheet - Brent Mallon - 08/06/2022",
+          "dateUploaded": "08/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Brent Mallon - 15/06/2022",
+          "dateUploaded": "15/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Brent Mallon - 22/06/2022",
+          "dateUploaded": "22/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Brent Mallon - 28/06/2022",
+          "dateUploaded": "28/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surname": "Milne",
+      "firstname": "Logan",
+      "trade": "Painter",
+      "rate": "50.00",
+      "overtimeRate": "00.00",
+      "jobSheets": [
+        {
+          "filename": "Job Sheet - Logan Milne - 08/06/2022",
+          "dateUploaded": "08/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Logan Milne - 15/06/2022",
+          "dateUploaded": "15/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Logan Milne - 22/06/2022",
+          "dateUploaded": "22/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Logan Milne - 28/06/2022",
+          "dateUploaded": "28/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surname": "Scully",
+      "firstname": "Jim",
+      "trade": "Beer Servicemen",
+      "rate": "50.00",
+      "overtimeRate": "00.00",
+      "jobSheets": [
+        {
+          "filename": "Job Sheet - Jim Scully - 08/06/2022",
+          "dateUploaded": "08/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Jim Scully - 15/06/2022",
+          "dateUploaded": "15/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Jim Scully - 22/06/2022",
+          "dateUploaded": "22/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Jim Scully - 28/06/2022",
+          "dateUploaded": "28/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surname": "Walker",
+      "firstname": "Wayne",
+      "trade": "Carpenter",
+      "rate": "50.00",
+      "overtimeRate": "00.00",
+      "jobSheets": [
+        {
+          "filename": "Job Sheet - Wayne Walker - 08/06/2022",
+          "dateUploaded": "08/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Wayne Walker - 15/06/2022",
+          "dateUploaded": "15/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Wayne Walker - 22/06/2022",
+          "dateUploaded": "22/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        },
+        {
+          "filename": "Job Sheet - Wayne Walker - 28/06/2022",
+          "dateUploaded": "28/06/2022",
+          "fileLocation": "https://corporatebs-generator.sameerkumar.website/",
+          "jobInfo": [
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            },
+            {
+              "location": "Waikiwi",
+              "workType": "Painting",
+              "startTime": "12:00pm",
+              "finishTime": "2:00pm",
+              "hours": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

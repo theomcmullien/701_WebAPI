@@ -1,0 +1,58 @@
+{
+  "establishments": [
+    {
+      "name": "Kelvin Hotel",
+      "address": "20 Kelvin Street",
+      "manager": "Jo harris",
+      "email": "manager@Kelvinhotel.com"
+    },
+    {
+      "name": "Homestead Vila",
+      "address": "329 Dee Street",
+      "manager": "Natalie Gilson",
+      "email": "manager@homesteadvilla.com"
+    },
+    {
+      "name": "Waikiwi",
+      "address": "45 Racecourse Road",
+      "manager": "Dean Nicol, Test Name",
+      "email": "dean@ascotpark.com, test@email.com"
+    },
+    {
+      "name": "Balmoral Lodge",
+      "address": "256 Tay Street",
+      "manager": "Sharon Higa",
+      "email": "manager@balmoral.com"
+    },
+    {
+      "name": "Ashford Motor Inn",
+      "address": "35 Papanui Road",
+      "manager": "Shelly Jenkins",
+      "email": "manager@ashfordinn.com"
+    },
+    {
+      "name": "Eastern Suburbs",
+      "address": "60 Glengarry Crescent",
+      "manager": "James Wesney",
+      "email": "manager@easternsuburbs.com"
+    },
+    {
+      "name": "New Field Tavern",
+      "address": "315 Centre Street",
+      "manager": "Jemma Wild",
+      "email": "manager@newfieldtavern.com"
+    },
+    {
+      "name": "test scenario",
+      "address": "test street",
+      "manager": "manager 1, manager 2",
+      "email": "manager1email@google.com, manager2email@google.com"
+    },
+    {
+      "name" : "Ascot",
+      "address" : "12 Ascot Rd",
+      "manager" : "idk",
+      "email" : "manager@ascot"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "codes": [
+    {
+      "description": "Repairs & Maintenance",
+      "code": "7471"
+    },
+    {
+      "description": "Redevelopment",
+      "code": "9891800"
+    },
+    {
+      "description": "Coal Boiler",
+      "code": "746214"
+    },
+    {
+      "description": "Coal Feed Equipment",
+      "code": "746215"
+    },
+    {
+      "description": "Diesel Boiler",
+      "code": "746221"
+    },
+    {
+      "description": "Steam Boiler",
+      "code": "746222"
+    },
+    {
+      "description": "Electric Boiler",
+      "code": "746231"
+    },
+    {
+      "description": "Heat Circulation Pumps",
+      "code": "746232"
+    },
+    {
+      "description": "Heating Maintenace",
+      "code": "746241"
+    },
+    {
+      "description": "Ventilation - Extraction",
+      "code": "746242"
+    }
+  ]
+}

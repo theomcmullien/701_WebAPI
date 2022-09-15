@@ -1,0 +1,73 @@
+{
+  "dates": [
+    {
+      "year": 2020,
+      "periods": [
+        {
+          "month": "January",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        },
+        {
+          "month": "February",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        },
+        {
+          "month": "March",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "periods": [
+        {
+          "month": "April",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        },
+        {
+          "month": "May",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        },
+        {
+          "month": "June",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "periods": [
+        {
+          "month": "July",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        },
+        {
+          "month": "August",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        },
+        {
+          "month": "September",
+          "weeks": "4",
+          "startDate": "01/01/2020",
+          "endDate": "28/01/2020"
+        }
+      ]
+    }
+  ]
+}

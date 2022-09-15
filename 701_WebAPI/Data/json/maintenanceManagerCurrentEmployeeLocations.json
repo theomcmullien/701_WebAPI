@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "firstname": "Rickelle",
+      "lastname": "Dempster",
+      "location": "Waikiwi",
+      "startTime": "8:00am"
+    },
+    {
+      "firstname": "Wayne",
+      "lastname": "Dimmock",
+      "location": "Ascot",
+      "startTime": "9:00am"
+    },
+    {
+      "firstname": "Brent",
+      "lastname": "Mallon",
+      "location": "Waxys",
+      "startTime": "8:30am"
+    },
+    {
+      "firstname": "Brian",
+      "lastname": "Walker",
+      "location": "The Langlands",
+      "startTime": "10:00am"
+    }
+  ]
+}
