@@ -4,7 +4,7 @@
 
 namespace _701_WebAPI.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -117,7 +117,8 @@ namespace _701_WebAPI.Migrations
                 {
                     WorkTypeID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ChargeCodeID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

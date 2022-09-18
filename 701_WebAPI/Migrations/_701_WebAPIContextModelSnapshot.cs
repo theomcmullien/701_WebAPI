@@ -201,6 +201,9 @@ namespace _701_WebAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WorkTypeID"), 1L, 1);
 
+                    b.Property<int>("ChargeCodeID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
