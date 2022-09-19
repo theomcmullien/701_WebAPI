@@ -30,7 +30,7 @@ namespace _701_WebAPI.Controllers.GetControllers
             }
             catch (Exception)
             {
-                return NotFound();
+                return Ok();
             }
 
             if (job == null) return NotFound();

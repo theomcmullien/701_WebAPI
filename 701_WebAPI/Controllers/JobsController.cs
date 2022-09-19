@@ -110,8 +110,8 @@ namespace _701_WebAPI.Controllers
             }
             else
             {
-                var jList = await _context.Job.Where(j => j.AccountID == job.AccountID).ToListAsync();
-                foreach (var j in jList) if (!j.IsCompleted) await DeleteJob(j.JobID);
+                var jList = await _context.Job.Where(j => j.AccountID == job.AccountID && !j.IsCompleted).ToListAsync();
+                foreach (var j in jList) await DeleteJob(j.JobID);
 
                 job.FinishTime = null;
                 job.Hours = null;
