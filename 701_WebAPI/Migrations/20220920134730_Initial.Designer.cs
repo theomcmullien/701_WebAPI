@@ -12,14 +12,14 @@ using _701_WebAPI.Data;
 namespace _701_WebAPI.Migrations
 {
     [DbContext(typeof(_701_WebAPIContext))]
-    [Migration("20220919143941_Initial")]
+    [Migration("20220920134730_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -385,6 +385,51 @@ namespace _701_WebAPI.Migrations
                             Lastname = "Thompson",
                             Password = "123",
                             Role = "Establishment Manager"
+                        },
+                        new
+                        {
+                            AccountID = 32,
+                            Email = "maintenance@gmail.co.nz",
+                            Firstname = "MaintenanceFirst",
+                            Lastname = "MaintenanceLast",
+                            Password = "123",
+                            Role = "Maintenance Manager"
+                        },
+                        new
+                        {
+                            AccountID = 33,
+                            Email = "office1@gmail.co.nz",
+                            Firstname = "Office1First",
+                            Lastname = "Office1Last",
+                            Password = "123",
+                            Role = "Office Staff"
+                        },
+                        new
+                        {
+                            AccountID = 34,
+                            Email = "office2@gmail.co.nz",
+                            Firstname = "Office2First",
+                            Lastname = "Office2Last",
+                            Password = "123",
+                            Role = "Office Staff"
+                        },
+                        new
+                        {
+                            AccountID = 35,
+                            Email = "adam@ilt.co.nz",
+                            Firstname = "Adam",
+                            Lastname = "Leask",
+                            Password = "123",
+                            Role = "Admin"
+                        },
+                        new
+                        {
+                            AccountID = 36,
+                            Email = "kris@ilt.co.nz",
+                            Firstname = "Kris",
+                            Lastname = "Leatherby",
+                            Password = "123",
+                            Role = "Admin"
                         });
                 });
 
@@ -725,8 +770,8 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             EstablishmentID = 1,
-                            Address = "35 East Road",
-                            Name = "Ascot"
+                            Address = "Corner of Tay Street & Racecourse Road",
+                            Name = "Ascot Hotel Motel"
                         },
                         new
                         {
@@ -762,7 +807,7 @@ namespace _701_WebAPI.Migrations
                         {
                             EstablishmentID = 7,
                             Address = "60 Glengarry Crescent",
-                            Name = "Eastern Suburbs"
+                            Name = "Eastern Suburbs Tavern"
                         },
                         new
                         {
@@ -780,7 +825,7 @@ namespace _701_WebAPI.Migrations
                         {
                             EstablishmentID = 10,
                             Address = "Dee Street",
-                            Name = "Homestead"
+                            Name = "Avenal Homestead"
                         },
                         new
                         {
@@ -791,8 +836,8 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             EstablishmentID = 12,
-                            Address = "28 Cnr Dee &, Leet Street",
-                            Name = "Lone Star"
+                            Address = "28 Cnr Dee & Leet Street",
+                            Name = "Lone Star Cafe"
                         },
                         new
                         {
@@ -815,13 +860,13 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             EstablishmentID = 16,
-                            Address = "123456789",
+                            Address = "Cnr Elles Rd & Tweed Street",
                             Name = "South City Liquorland"
                         },
                         new
                         {
                             EstablishmentID = 17,
-                            Address = "Cnr Elles Rd &, Tweed Street",
+                            Address = "44 North Road",
                             Name = "Collingwood Super Liquor"
                         },
                         new
@@ -865,6 +910,429 @@ namespace _701_WebAPI.Migrations
                             EstablishmentID = 24,
                             Address = "228 Elles Road",
                             Name = "Workshop Hours"
+                        });
+                });
+
+            modelBuilder.Entity("_701_WebAPI.Models.EstablishmentCode", b =>
+                {
+                    b.Property<int>("EstablishmentCodeID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EstablishmentCodeID"), 1L, 1);
+
+                    b.Property<int>("ChargeCodeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EstablishmentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("EstablishmentCodeID");
+
+                    b.ToTable("EstablishmentCode");
+
+                    b.HasData(
+                        new
+                        {
+                            EstablishmentCodeID = 1,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 1
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 2,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 1
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 3,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 1
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 4,
+                            ChargeCodeID = 48,
+                            EstablishmentID = 1
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 5,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 23
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 6,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 23
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 7,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 23
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 8,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 2
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 9,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 2
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 10,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 2
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 11,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 3
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 12,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 3
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 13,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 4
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 14,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 4
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 15,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 5
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 16,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 5
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 17,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 6
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 18,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 6
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 19,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 7
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 20,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 7
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 21,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 7
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 22,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 8
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 23,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 8
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 24,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 8
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 25,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 9
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 26,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 9
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 27,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 9
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 28,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 10
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 29,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 10
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 30,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 10
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 31,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 11
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 32,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 33,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 11
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 34,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 12
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 35,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 12
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 36,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 12
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 37,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 13
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 38,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 13
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 39,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 13
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 40,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 14
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 41,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 14
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 42,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 14
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 43,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 15
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 44,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 15
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 45,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 15
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 46,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 22
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 47,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 22
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 48,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 22
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 49,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 16
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 50,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 16
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 51,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 16
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 52,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 17
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 53,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 17
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 54,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 17
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 55,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 18
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 56,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 18
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 57,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 18
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 58,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 19
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 59,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 19
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 60,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 20
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 61,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 20
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 62,
+                            ChargeCodeID = 43,
+                            EstablishmentID = 20
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 63,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 20
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 64,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 20
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 65,
+                            ChargeCodeID = 1,
+                            EstablishmentID = 21
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 66,
+                            ChargeCodeID = 2,
+                            EstablishmentID = 21
+                        },
+                        new
+                        {
+                            EstablishmentCodeID = 67,
+                            ChargeCodeID = 49,
+                            EstablishmentID = 24
                         });
                 });
 
@@ -1017,6 +1485,9 @@ namespace _701_WebAPI.Migrations
                     b.Property<int>("AccountID")
                         .HasColumnType("int");
 
+                    b.Property<int>("ChargeCodeID")
+                        .HasColumnType("int");
+
                     b.Property<int>("EstablishmentID")
                         .HasColumnType("int");
 
@@ -1041,9 +1512,6 @@ namespace _701_WebAPI.Migrations
                     b.Property<string>("StartTime")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("WorkTypeID")
-                        .HasColumnType("int");
-
                     b.HasKey("JobID");
 
                     b.ToTable("Job");
@@ -1053,6 +1521,7 @@ namespace _701_WebAPI.Migrations
                         {
                             JobID = 1,
                             AccountID = 1,
+                            ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
                             FinishTime = "08/29/2022 10:45",
@@ -1060,13 +1529,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Just started painting the entirety of south city liquorland",
-                            StartTime = "08/29/2022 05:30",
-                            WorkTypeID = 1
+                            StartTime = "08/29/2022 05:30"
                         },
                         new
                         {
                             JobID = 2,
                             AccountID = 1,
+                            ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
                             FinishTime = "08/29/2022 17:00",
@@ -1074,13 +1543,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Continued painting the entirety of south city liquorland",
-                            StartTime = "08/29/2022 13:00",
-                            WorkTypeID = 1
+                            StartTime = "08/29/2022 13:00"
                         },
                         new
                         {
                             JobID = 3,
                             AccountID = 1,
+                            ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
                             FinishTime = "09/15/2023 12:45",
@@ -1088,13 +1557,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Continued painting the entirety of south city liquorland",
-                            StartTime = "09/15/2022 06:00",
-                            WorkTypeID = 1
+                            StartTime = "09/15/2022 06:00"
                         },
                         new
                         {
                             JobID = 4,
                             AccountID = 1,
+                            ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
                             FinishTime = "09/17/2022 09:00",
@@ -1102,13 +1571,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Just finished painting the entirety of south city liquorland by myself",
-                            StartTime = "09/17/2022 06:00",
-                            WorkTypeID = 1
+                            StartTime = "09/17/2022 06:00"
                         },
                         new
                         {
                             JobID = 5,
                             AccountID = 2,
+                            ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
                             FinishTime = "06/13/2022 13:00",
@@ -1116,13 +1585,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Just finished building some chairs for waxys",
-                            StartTime = "06/13/2022 05:00",
-                            WorkTypeID = 2
+                            StartTime = "06/13/2022 05:00"
                         },
                         new
                         {
                             JobID = 6,
                             AccountID = 2,
+                            ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
                             FinishTime = "06/14/2022 10:00",
@@ -1130,13 +1599,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Just started building some tables for waxys",
-                            StartTime = "06/14/2022 05:00",
-                            WorkTypeID = 2
+                            StartTime = "06/14/2022 05:00"
                         },
                         new
                         {
                             JobID = 7,
                             AccountID = 2,
+                            ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
                             FinishTime = "06/15/2022 11:00",
@@ -1144,13 +1613,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Just finished building some tables for waxys",
-                            StartTime = "06/15/2022 07:30",
-                            WorkTypeID = 2
+                            StartTime = "06/15/2022 07:30"
                         },
                         new
                         {
                             JobID = 8,
                             AccountID = 3,
+                            ChargeCodeID = 1,
                             EstablishmentID = 1,
                             FinancialPeriodID = 10,
                             FinishTime = "01/04/2023 13:00",
@@ -1158,13 +1627,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Did some plumbing out at the ascot",
-                            StartTime = "01/04/2023 05:30",
-                            WorkTypeID = 3
+                            StartTime = "01/04/2023 05:30"
                         },
                         new
                         {
                             JobID = 9,
                             AccountID = 3,
+                            ChargeCodeID = 1,
                             EstablishmentID = 1,
                             FinancialPeriodID = 10,
                             FinishTime = "01/06/2023 13:00",
@@ -1172,13 +1641,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Did some plumbing out at the ascot, a pipe under the sink was leaking",
-                            StartTime = "01/06/2023 05:00",
-                            WorkTypeID = 3
+                            StartTime = "01/06/2023 05:00"
                         },
                         new
                         {
                             JobID = 10,
                             AccountID = 6,
+                            ChargeCodeID = 1,
                             EstablishmentID = 11,
                             FinancialPeriodID = 3,
                             FinishTime = "06/16/2022 18:00",
@@ -1186,13 +1655,13 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Started some wiring out at the kiwi",
-                            StartTime = "06/16/2022 13:00",
-                            WorkTypeID = 4
+                            StartTime = "06/16/2022 13:00"
                         },
                         new
                         {
                             JobID = 11,
                             AccountID = 6,
+                            ChargeCodeID = 1,
                             EstablishmentID = 11,
                             FinancialPeriodID = 3,
                             FinishTime = "06/18/2022 17:00",
@@ -1200,8 +1669,7 @@ namespace _701_WebAPI.Migrations
                             HoursOT = 0.0,
                             IsCompleted = true,
                             Notes = "Finished the wiring out at the kiwi",
-                            StartTime = "06/18/2022 12:00",
-                            WorkTypeID = 4
+                            StartTime = "06/18/2022 12:00"
                         });
                 });
 
@@ -1250,57 +1718,6 @@ namespace _701_WebAPI.Migrations
                         {
                             TradeID = 6,
                             Type = "Gardener"
-                        });
-                });
-
-            modelBuilder.Entity("_701_WebAPI.Models.WorkType", b =>
-                {
-                    b.Property<int>("WorkTypeID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WorkTypeID"), 1L, 1);
-
-                    b.Property<int>("ChargeCodeID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Type")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("WorkTypeID");
-
-                    b.ToTable("WorkType");
-
-                    b.HasData(
-                        new
-                        {
-                            WorkTypeID = 1,
-                            ChargeCodeID = 1,
-                            Type = "Painting"
-                        },
-                        new
-                        {
-                            WorkTypeID = 2,
-                            ChargeCodeID = 1,
-                            Type = "Building"
-                        },
-                        new
-                        {
-                            WorkTypeID = 3,
-                            ChargeCodeID = 1,
-                            Type = "Plumbing"
-                        },
-                        new
-                        {
-                            WorkTypeID = 4,
-                            ChargeCodeID = 1,
-                            Type = "Wiring"
-                        },
-                        new
-                        {
-                            WorkTypeID = 5,
-                            ChargeCodeID = 1,
-                            Type = "Gardening"
                         });
                 });
 #pragma warning restore 612, 618

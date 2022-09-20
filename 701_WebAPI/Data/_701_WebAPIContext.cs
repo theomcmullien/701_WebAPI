@@ -16,11 +16,11 @@ namespace _701_WebAPI.Data
         public DbSet<Account>? Account { get; set; }
         public DbSet<ChargeCode>? ChargeCode { get; set; }
         public DbSet<Establishment>? Establishment { get; set; }
+        public DbSet<EstablishmentCode>? EstablishmentCode { get; set; }
         public DbSet<FinancialPeriod>? FinancialPeriod { get; set; }
         public DbSet<Job>? Job { get; set; }
         public DbSet<Trade>? Trade { get; set; }
-        public DbSet<WorkType>? WorkType { get; set; }
-
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // -------------------------------------------------- Account --------------------------------------------------
@@ -460,6 +460,79 @@ namespace _701_WebAPI.Data
                     TradeID = null,
                     EstablishmentID = 24,
                     JobSheets = null
+                },
+                /// -------------------- Maintenance Manager --------------------
+                new Account()
+                {
+                    AccountID = 32,
+                    Firstname = "MaintenanceFirst",
+                    Lastname = "MaintenanceLast",
+                    Email = "maintenance@gmail.co.nz",
+                    Password = "123",
+                    Role = "Maintenance Manager",
+                    Rate = null,
+                    RateOT = null,
+                    TradeID = null,
+                    EstablishmentID = null,
+                    JobSheets = null
+                },
+                /// -------------------- Office Staff --------------------
+                new Account()
+                {
+                    AccountID = 33,
+                    Firstname = "Office1First",
+                    Lastname = "Office1Last",
+                    Email = "office1@gmail.co.nz",
+                    Password = "123",
+                    Role = "Office Staff",
+                    Rate = null,
+                    RateOT = null,
+                    TradeID = null,
+                    EstablishmentID = null,
+                    JobSheets = null
+                },
+                new Account()
+                {
+                    AccountID = 34,
+                    Firstname = "Office2First",
+                    Lastname = "Office2Last",
+                    Email = "office2@gmail.co.nz",
+                    Password = "123",
+                    Role = "Office Staff",
+                    Rate = null,
+                    RateOT = null,
+                    TradeID = null,
+                    EstablishmentID = null,
+                    JobSheets = null
+                },
+                /// -------------------- Admin --------------------
+                new Account()
+                {
+                    AccountID = 35,
+                    Firstname = "Adam",
+                    Lastname = "Leask",
+                    Email = "adam@ilt.co.nz",
+                    Password = "123",
+                    Role = "Admin",
+                    Rate = null,
+                    RateOT = null,
+                    TradeID = null,
+                    EstablishmentID = null,
+                    JobSheets = null
+                },
+                new Account()
+                {
+                    AccountID = 36,
+                    Firstname = "Kris",
+                    Lastname = "Leatherby",
+                    Email = "kris@ilt.co.nz",
+                    Password = "123",
+                    Role = "Admin",
+                    Rate = null,
+                    RateOT = null,
+                    TradeID = null,
+                    EstablishmentID = null,
+                    JobSheets = null
                 }
             );
             // -------------------------------------------------- ChargeCode --------------------------------------------------
@@ -764,8 +837,8 @@ namespace _701_WebAPI.Data
                 new Establishment()
                 {
                     EstablishmentID = 1,
-                    Name = "Ascot",
-                    Address = "35 East Road"
+                    Name = "Ascot Hotel Motel",
+                    Address = "Corner of Tay Street & Racecourse Road"
                 },
                 new Establishment()
                 {
@@ -800,7 +873,7 @@ namespace _701_WebAPI.Data
                 new Establishment()
                 {
                     EstablishmentID = 7,
-                    Name = "Eastern Suburbs",
+                    Name = "Eastern Suburbs Tavern",
                     Address = "60 Glengarry Crescent"
                 },
                 new Establishment()
@@ -818,7 +891,7 @@ namespace _701_WebAPI.Data
                 new Establishment()
                 {
                     EstablishmentID = 10,
-                    Name = "Homestead",
+                    Name = "Avenal Homestead",
                     Address = "Dee Street"
                 },
                 new Establishment()
@@ -830,8 +903,8 @@ namespace _701_WebAPI.Data
                 new Establishment()
                 {
                     EstablishmentID = 12,
-                    Name = "Lone Star",
-                    Address = "28 Cnr Dee &, Leet Street"
+                    Name = "Lone Star Cafe",
+                    Address = "28 Cnr Dee & Leet Street"
                 },
                 new Establishment()
                 {
@@ -855,13 +928,13 @@ namespace _701_WebAPI.Data
                 {
                     EstablishmentID = 16,
                     Name = "South City Liquorland",
-                    Address = "123456789"
+                    Address = "Cnr Elles Rd & Tweed Street"
                 },
                 new Establishment()
                 {
                     EstablishmentID = 17,
                     Name = "Collingwood Super Liquor",
-                    Address = "Cnr Elles Rd &, Tweed Street"
+                    Address = "44 North Road"
                 },
                 new Establishment()
                 {
@@ -904,6 +977,436 @@ namespace _701_WebAPI.Data
                     EstablishmentID = 24,
                     Name = "Workshop Hours",
                     Address = "228 Elles Road"
+                }
+            );
+            // -------------------------------------------------- EstablishmentCode --------------------------------------------------
+            builder.Entity<EstablishmentCode>().HasData(
+                /// -------------------- Ascot Hotel Motel --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 1,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 2,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 3,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 43
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 4,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 48
+                },
+                /// -------------------- Langlands Hotel --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 5,
+                    EstablishmentID = 23,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 6,
+                    EstablishmentID = 23,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 7,
+                    EstablishmentID = 23,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Kelvin Hotel --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 8,
+                    EstablishmentID = 2,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 9,
+                    EstablishmentID = 2,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 10,
+                    EstablishmentID = 2,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Homestead Villa --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 11,
+                    EstablishmentID = 3,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 12,
+                    EstablishmentID = 3,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Balmoral Lodge --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 13,
+                    EstablishmentID = 4,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 14,
+                    EstablishmentID = 4,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Cable Court --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 15,
+                    EstablishmentID = 5,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 16,
+                    EstablishmentID = 5,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Ashford Motor --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 17,
+                    EstablishmentID = 6,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 18,
+                    EstablishmentID = 6,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Eastern Suburbs Tavern --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 19,
+                    EstablishmentID = 7,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 20,
+                    EstablishmentID = 7,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 21,
+                    EstablishmentID = 7,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Newfield Tavern --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 22,
+                    EstablishmentID = 8,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 23,
+                    EstablishmentID = 8,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 24,
+                    EstablishmentID = 8,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Northern Tavern --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 25,
+                    EstablishmentID = 9,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 26,
+                    EstablishmentID = 9,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 27,
+                    EstablishmentID = 9,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Avenal Homestead --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 28,
+                    EstablishmentID = 10,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 29,
+                    EstablishmentID = 10,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 30,
+                    EstablishmentID = 10,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Waikiwi Tavern --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 31,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 32,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 33,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Lone Star Cafe --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 34,
+                    EstablishmentID = 12,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 35,
+                    EstablishmentID = 12,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 36,
+                    EstablishmentID = 12,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Southland Tavern --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 37,
+                    EstablishmentID = 13,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 38,
+                    EstablishmentID = 13,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 39,
+                    EstablishmentID = 13,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Speights Alehouse --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 40,
+                    EstablishmentID = 14,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 41,
+                    EstablishmentID = 14,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 42,
+                    EstablishmentID = 14,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Waxys --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 43,
+                    EstablishmentID = 15,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 44,
+                    EstablishmentID = 15,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 45,
+                    EstablishmentID = 15,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Centrepoint Liquorland --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 46,
+                    EstablishmentID = 22,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 47,
+                    EstablishmentID = 22,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 48,
+                    EstablishmentID = 22,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- South City Liquorland --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 49,
+                    EstablishmentID = 16,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 50,
+                    EstablishmentID = 16,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 51,
+                    EstablishmentID = 16,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Collingwood Super Liquor --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 52,
+                    EstablishmentID = 17,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 53,
+                    EstablishmentID = 17,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 54,
+                    EstablishmentID = 17,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- East End Bottlestore --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 55,
+                    EstablishmentID = 18,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 56,
+                    EstablishmentID = 18,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 57,
+                    EstablishmentID = 18,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Windsor Bottlestore --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 58,
+                    EstablishmentID = 19,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 59,
+                    EstablishmentID = 19,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Southland Super Liquor --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 60,
+                    EstablishmentID = 20,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 61,
+                    EstablishmentID = 20,
+                    ChargeCodeID = 2
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 62,
+                    EstablishmentID = 20,
+                    ChargeCodeID = 43
+                },
+                /// -------------------- Southland Super Liquor --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 63,
+                    EstablishmentID = 20,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 64,
+                    EstablishmentID = 20,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Ascot Sports Bar --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 65,
+                    EstablishmentID = 21,
+                    ChargeCodeID = 1
+                },
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 66,
+                    EstablishmentID = 21,
+                    ChargeCodeID = 2
+                },
+                /// -------------------- Workshop Hours --------------------
+                new EstablishmentCode()
+                {
+                    EstablishmentCodeID = 67,
+                    EstablishmentID = 24,
+                    ChargeCodeID = 49
                 }
             );
             // -------------------------------------------------- FinancialPeriod --------------------------------------------------
@@ -1029,9 +1532,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Just started painting the entirety of south city liquorland",
                     IsCompleted = true,
-                    WorkTypeID = 1,
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
+                    ChargeCodeID = 1,
                     AccountID = 1,
                 },
                 new Job()
@@ -1043,9 +1546,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Continued painting the entirety of south city liquorland",
                     IsCompleted = true,
-                    WorkTypeID = 1,
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
+                    ChargeCodeID = 1,
                     AccountID = 1,
                 },
                 new Job()
@@ -1057,9 +1560,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Continued painting the entirety of south city liquorland",
                     IsCompleted = true,
-                    WorkTypeID = 1,
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
+                    ChargeCodeID = 1,
                     AccountID = 1,
                 },
                 new Job()
@@ -1071,9 +1574,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Just finished painting the entirety of south city liquorland by myself",
                     IsCompleted = true,
-                    WorkTypeID = 1,
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
+                    ChargeCodeID = 1,
                     AccountID = 1,
                 },
                 /// -------------------- Employee 2 --------------------
@@ -1086,9 +1589,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Just finished building some chairs for waxys",
                     IsCompleted = true,
-                    WorkTypeID = 2,
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
+                    ChargeCodeID = 2,
                     AccountID = 2,
                 },
                 new Job()
@@ -1100,9 +1603,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Just started building some tables for waxys",
                     IsCompleted = true,
-                    WorkTypeID = 2,
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
+                    ChargeCodeID = 2,
                     AccountID = 2,
                 },
                 new Job()
@@ -1114,9 +1617,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Just finished building some tables for waxys",
                     IsCompleted = true,
-                    WorkTypeID = 2,
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
+                    ChargeCodeID = 2,
                     AccountID = 2,
                 },
                 /// -------------------- Employee 3 --------------------
@@ -1129,9 +1632,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Did some plumbing out at the ascot",
                     IsCompleted = true,
-                    WorkTypeID = 3,
                     FinancialPeriodID = 10,
                     EstablishmentID = 1,
+                    ChargeCodeID = 1,
                     AccountID = 3,
                 },
                 new Job()
@@ -1143,9 +1646,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Did some plumbing out at the ascot, a pipe under the sink was leaking",
                     IsCompleted = true,
-                    WorkTypeID = 3,
                     FinancialPeriodID = 10,
                     EstablishmentID = 1,
+                    ChargeCodeID = 1,
                     AccountID = 3,
                 },
                 /// -------------------- Employee 4 --------------------
@@ -1158,9 +1661,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Started some wiring out at the kiwi",
                     IsCompleted = true,
-                    WorkTypeID = 4,
                     FinancialPeriodID = 3,
                     EstablishmentID = 11,
+                    ChargeCodeID = 1,
                     AccountID = 6,
                 },
                 new Job()
@@ -1172,9 +1675,9 @@ namespace _701_WebAPI.Data
                     HoursOT = 0,
                     Notes = "Finished the wiring out at the kiwi",
                     IsCompleted = true,
-                    WorkTypeID = 4,
                     FinancialPeriodID = 3,
                     EstablishmentID = 11,
+                    ChargeCodeID = 1,
                     AccountID = 6,
                 }
             );
@@ -1211,39 +1714,7 @@ namespace _701_WebAPI.Data
                     Type = "Gardener"
                 }
             );
-            // -------------------------------------------------- WorkType --------------------------------------------------
-            builder.Entity<WorkType>().HasData(
-                new WorkType()
-                {
-                    WorkTypeID = 1,
-                    Type = "Painting",
-                    ChargeCodeID = 1,
-                },
-                new WorkType()
-                {
-                    WorkTypeID = 2,
-                    Type = "Building",
-                    ChargeCodeID = 1,
-                },
-                new WorkType()
-                {
-                    WorkTypeID = 3,
-                    Type = "Plumbing",
-                    ChargeCodeID = 1,
-                },
-                new WorkType()
-                {
-                    WorkTypeID = 4,
-                    Type = "Wiring",
-                    ChargeCodeID = 1,
-                },
-                new WorkType()
-                {
-                    WorkTypeID = 5,
-                    Type = "Gardening",
-                    ChargeCodeID = 1,
-                }
-            );
         }
+
     }
 }
