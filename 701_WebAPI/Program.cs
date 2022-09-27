@@ -13,6 +13,7 @@ builder.Services.AddDbContext<_701_WebAPIContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("_701_WebAPIContext")));
 
 builder.Services.AddControllers();
+builder.Services.AddControllers().AddControllersAsServices();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -26,27 +27,26 @@ builder.Services.AddCors(options =>
     });
 }); //Cors
 
-string domain = "https://dev-a3wdzleo.us.auth0.com/";
-string identifier = "https://701-WebAPI-Auth0/api"; //change in appsettings.json
+//string domain = "https://dev-a3wdzleo.us.auth0.com/";
+//string identifier = "https://701-WebAPI-Auth0/api"; //change in appsettings.json
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(options =>
+//{
+//    options.Authority = domain;
+//    options.Audience = identifier;
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        NameClaimType = ClaimTypes.NameIdentifier
+//    };
+//}); //Jwt
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.Authority = domain;
-    options.Audience = identifier;
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        NameClaimType = ClaimTypes.NameIdentifier
-    };
-}); //Jwt
-
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("read:everything", policy => policy.Requirements.Add(new HasScopeRequirement("read:everything", domain)));
-}); //Jwt
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("read:everything", policy => policy.Requirements.Add(new HasScopeRequirement("read:everything", domain)));
+//}); //Jwt
 
 builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>(); //Jwt
 
@@ -63,7 +63,7 @@ app.UseHttpsRedirection();
 
 app.UseCors(); //Cors
 
-app.UseAuthentication(); //Jwt
+//app.UseAuthentication(); //Jwt
 
 app.UseAuthorization();
 

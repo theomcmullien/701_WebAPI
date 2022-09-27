@@ -13,7 +13,7 @@ namespace _701_WebAPI.Data
         {
         }
 
-        public DbSet<Account>? Account { get; set; }
+        //public DbSet<Account>? Account { get; set; }
         public DbSet<ChargeCode>? ChargeCode { get; set; }
         public DbSet<Establishment>? Establishment { get; set; }
         public DbSet<EstablishmentCode>? EstablishmentCode { get; set; }
@@ -24,517 +24,481 @@ namespace _701_WebAPI.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // -------------------------------------------------- Account --------------------------------------------------
-            builder.Entity<Account>().HasData(
-                /// -------------------- Employee --------------------
-                new Account()
-                {
-                    AccountID = 1,
-                    Firstname = "Rickelle",
-                    Lastname = "Dempster",
-                    Email = "rdempster@gmail.com",
-                    Password = "123",
-                    Role = "Employee",
-                    Rate = 50.00m,
-                    RateOT = 0m,
-                    TradeID = 1,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 2,
-                    Firstname = "Wayne",
-                    Lastname = "Dimmock",
-                    Email = "wdimmock@gmail.com",
-                    Password = "123",
-                    Role = "Employee",
-                    Rate = 50.00m,
-                    RateOT = 56.00m,
-                    TradeID = 2,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 3,
-                    Firstname = "Brent",
-                    Lastname = "Mallon",
-                    Email = "bmallon@gmail.com",
-                    Password = "123",
-                    Role = "Employee",
-                    Rate = 50.00m,
-                    RateOT = 66.00m,
-                    TradeID = 3,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 4,
-                    Firstname = "Logan",
-                    Lastname = "Milne",
-                    Email = "lmilne@gmail.com",
-                    Password = "123",
-                    Role = "Employee",
-                    Rate = 50.00m,
-                    RateOT = 0m,
-                    TradeID = 1,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 5,
-                    Firstname = "Jim",
-                    Lastname = "Scully",
-                    Email = "jscully@gmail.com",
-                    Password = "123",
-                    Role = "Employee",
-                    Rate = 50.00m,
-                    RateOT = 0m,
-                    TradeID = 4,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 6,
-                    Firstname = "Brian",
-                    Lastname = "Walker",
-                    Email = "bwalker@gmail.com",
-                    Password = "123",
-                    Role = "Employee",
-                    Rate = 52.00m,
-                    RateOT = 0m,
-                    TradeID = 5,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                /// -------------------- Establishment Manager --------------------
-                new Account()
-                {
-                    AccountID = 7,
-                    Firstname = "Dean",
-                    Lastname = "Nicol",
-                    Email = "dean@ascotparkhotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 1,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 8,
-                    Firstname = "Jo",
-                    Lastname = "Harris",
-                    Email = "manager@kelvinhotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 2,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 9,
-                    Firstname = "Natalie",
-                    Lastname = "Gilson",
-                    Email = "manager@villamotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 3,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 10,
-                    Firstname = "Sharon",
-                    Lastname = "Hinga",
-                    Email = "manager@balmoralmotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 4,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 11,
-                    Firstname = "Allie",
-                    Lastname = "Adams-Bell",
-                    Email = "manager@cablecourtmotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 5,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 12,
-                    Firstname = "Lindsay",
-                    Lastname = "Adams-Bell",
-                    Email = "manager@cablecourtmotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 5,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 13,
-                    Firstname = "Shelley",
-                    Lastname = "Jenkins",
-                    Email = "manager@ashfordmotorlodge.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 6,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 14,
-                    Firstname = "James",
-                    Lastname = "Wesney",
-                    Email = "manager@easternsuburbs.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 7,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 15,
-                    Firstname = "Jemma",
-                    Lastname = "Wild",
-                    Email = "manager@newfieldtavern.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 8,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 16,
-                    Firstname = "Northern",
-                    Lastname = "Manager",
-                    Email = "manager@northerntavern.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 9,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 17,
-                    Firstname = "Shanan",
-                    Lastname = "Te-Maiharoa",
-                    Email = "manager@avenalhomestead.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 10,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 18,
-                    Firstname = "Vicky",
-                    Lastname = "Cole",
-                    Email = "manager@waikiwitavern.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 11,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 19,
-                    Firstname = "Lonestar",
-                    Lastname = "Manager",
-                    Email = "manager@lonestarinv.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 12,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 20,
-                    Firstname = "Jo",
-                    Lastname = "Te-Maiharoa",
-                    Email = "manager@southlandtavern.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 13,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 21,
-                    Firstname = "Sam",
-                    Lastname = "Harpur",
-                    Email = "manager@speightsalehouseinv.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 14,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 22,
-                    Firstname = "Kelly",
-                    Lastname = "Burgess",
-                    Email = "manager@waxys.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 15,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 23,
-                    Firstname = "Mary-Ellen",
-                    Lastname = "Vercoe",
-                    Email = "manager@liquorlandsouthcity.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 16,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 24,
-                    Firstname = "Warren",
-                    Lastname = "Tayles",
-                    Email = "manager@superliquorcollingwood.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 17,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 25,
-                    Firstname = "Tracy",
-                    Lastname = "Poe",
-                    Email = "manager@eastendliquor.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 18,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 26,
-                    Firstname = "Stephane",
-                    Lastname = "Fabre",
-                    Email = "manager@windsorwines.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 19,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 27,
-                    Firstname = "Simon",
-                    Lastname = "Paterson",
-                    Email = "manager@superliquorsouthland.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 20,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 28,
-                    Firstname = "Cate",
-                    Lastname = "Wesney",
-                    Email = "cate@ascotparkhotel.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 21,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 29,
-                    Firstname = "Nicola",
-                    Lastname = "Moss",
-                    Email = "manager@liquorlandcentrepoint.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 22,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 30,
-                    Firstname = "Bryan",
-                    Lastname = "Townley",
-                    Email = "bryan@thelanglands.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 23,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 31,
-                    Firstname = "Bevan",
-                    Lastname = "Thompson",
-                    Email = "bevan@ilt.co.nz",
-                    Password = "123",
-                    Role = "Establishment Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = 24,
-                    JobSheets = null
-                },
-                /// -------------------- Maintenance Manager --------------------
-                new Account()
-                {
-                    AccountID = 32,
-                    Firstname = "MaintenanceFirst",
-                    Lastname = "MaintenanceLast",
-                    Email = "maintenance@gmail.co.nz",
-                    Password = "123",
-                    Role = "Maintenance Manager",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                /// -------------------- Office Staff --------------------
-                new Account()
-                {
-                    AccountID = 33,
-                    Firstname = "Office1First",
-                    Lastname = "Office1Last",
-                    Email = "office1@gmail.co.nz",
-                    Password = "123",
-                    Role = "Office Staff",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 34,
-                    Firstname = "Office2First",
-                    Lastname = "Office2Last",
-                    Email = "office2@gmail.co.nz",
-                    Password = "123",
-                    Role = "Office Staff",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                /// -------------------- Admin --------------------
-                new Account()
-                {
-                    AccountID = 35,
-                    Firstname = "Adam",
-                    Lastname = "Leask",
-                    Email = "adam@ilt.co.nz",
-                    Password = "123",
-                    Role = "Admin",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = null,
-                    JobSheets = null
-                },
-                new Account()
-                {
-                    AccountID = 36,
-                    Firstname = "Kris",
-                    Lastname = "Leatherby",
-                    Email = "kris@ilt.co.nz",
-                    Password = "123",
-                    Role = "Admin",
-                    Rate = null,
-                    RateOT = null,
-                    TradeID = null,
-                    EstablishmentID = null,
-                    JobSheets = null
-                }
-            );
+            //builder.Entity<Account>().HasData(
+            //    /// -------------------- Employee --------------------
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|6332c7bb35450ad949086866",
+            //        Firstname = "Rickelle",
+            //        Lastname = "Dempster",
+            //        Email = "rdempster@gmail.com",
+            //        Role = "Employee",
+            //        Rate = 50.00m,
+            //        RateOT = 0m,
+            //        TradeID = 1,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|2",
+            //        Firstname = "Wayne",
+            //        Lastname = "Dimmock",
+            //        Email = "wdimmock@gmail.com",
+            //        Role = "Employee",
+            //        Rate = 50.00m,
+            //        RateOT = 56.00m,
+            //        TradeID = 2,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|3",
+            //        Firstname = "Brent",
+            //        Lastname = "Mallon",
+            //        Email = "bmallon@gmail.com",
+            //        Role = "Employee",
+            //        Rate = 50.00m,
+            //        RateOT = 66.00m,
+            //        TradeID = 3,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|4",
+            //        Firstname = "Logan",
+            //        Lastname = "Milne",
+            //        Email = "lmilne@gmail.com",
+            //        Role = "Employee",
+            //        Rate = 50.00m,
+            //        RateOT = 0m,
+            //        TradeID = 1,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|5",
+            //        Firstname = "Jim",
+            //        Lastname = "Scully",
+            //        Email = "jscully@gmail.com",
+            //        Role = "Employee",
+            //        Rate = 50.00m,
+            //        RateOT = 0m,
+            //        TradeID = 4,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|6",
+            //        Firstname = "Brian",
+            //        Lastname = "Walker",
+            //        Email = "bwalker@gmail.com",
+            //        Role = "Employee",
+            //        Rate = 52.00m,
+            //        RateOT = 0m,
+            //        TradeID = 5,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    /// -------------------- Establishment Manager --------------------
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|7",
+            //        Firstname = "Dean",
+            //        Lastname = "Nicol",
+            //        Email = "dean@ascotparkhotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 1,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|8",
+            //        Firstname = "Jo",
+            //        Lastname = "Harris",
+            //        Email = "manager@kelvinhotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 2,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|9",
+            //        Firstname = "Natalie",
+            //        Lastname = "Gilson",
+            //        Email = "manager@villamotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 3,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|10",
+            //        Firstname = "Sharon",
+            //        Lastname = "Hinga",
+            //        Email = "manager@balmoralmotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 4,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|11",
+            //        Firstname = "Allie",
+            //        Lastname = "Adams-Bell",
+            //        Email = "manager@cablecourtmotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 5,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|12",
+            //        Firstname = "Lindsay",
+            //        Lastname = "Adams-Bell",
+            //        Email = "manager@cablecourtmotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 5,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|13",
+            //        Firstname = "Shelley",
+            //        Lastname = "Jenkins",
+            //        Email = "manager@ashfordmotorlodge.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 6,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|14",
+            //        Firstname = "James",
+            //        Lastname = "Wesney",
+            //        Email = "manager@easternsuburbs.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 7,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|15",
+            //        Firstname = "Jemma",
+            //        Lastname = "Wild",
+            //        Email = "manager@newfieldtavern.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 8,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|16",
+            //        Firstname = "Northern",
+            //        Lastname = "Manager",
+            //        Email = "manager@northerntavern.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 9,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|17",
+            //        Firstname = "Shanan",
+            //        Lastname = "Te-Maiharoa",
+            //        Email = "manager@avenalhomestead.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 10,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|18",
+            //        Firstname = "Vicky",
+            //        Lastname = "Cole",
+            //        Email = "manager@waikiwitavern.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 11,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|19",
+            //        Firstname = "Lonestar",
+            //        Lastname = "Manager",
+            //        Email = "manager@lonestarinv.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 12,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|20",
+            //        Firstname = "Jo",
+            //        Lastname = "Te-Maiharoa",
+            //        Email = "manager@southlandtavern.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 13,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|21",
+            //        Firstname = "Sam",
+            //        Lastname = "Harpur",
+            //        Email = "manager@speightsalehouseinv.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 14,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|22",
+            //        Firstname = "Kelly",
+            //        Lastname = "Burgess",
+            //        Email = "manager@waxys.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 15,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|23",
+            //        Firstname = "Mary-Ellen",
+            //        Lastname = "Vercoe",
+            //        Email = "manager@liquorlandsouthcity.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 16,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|24",
+            //        Firstname = "Warren",
+            //        Lastname = "Tayles",
+            //        Email = "manager@superliquorcollingwood.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 17,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|25",
+            //        Firstname = "Tracy",
+            //        Lastname = "Poe",
+            //        Email = "manager@eastendliquor.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 18,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|26",
+            //        Firstname = "Stephane",
+            //        Lastname = "Fabre",
+            //        Email = "manager@windsorwines.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 19,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|27",
+            //        Firstname = "Simon",
+            //        Lastname = "Paterson",
+            //        Email = "manager@superliquorsouthland.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 20,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|28",
+            //        Firstname = "Cate",
+            //        Lastname = "Wesney",
+            //        Email = "cate@ascotparkhotel.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 21,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|29",
+            //        Firstname = "Nicola",
+            //        Lastname = "Moss",
+            //        Email = "manager@liquorlandcentrepoint.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 22,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|30",
+            //        Firstname = "Bryan",
+            //        Lastname = "Townley",
+            //        Email = "bryan@thelanglands.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 23,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|31",
+            //        Firstname = "Bevan",
+            //        Lastname = "Thompson",
+            //        Email = "bevan@ilt.co.nz",
+            //        Role = "Establishment Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = 24,
+            //        JobSheets = null
+            //    },
+            //    /// -------------------- Maintenance Manager --------------------
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|32",
+            //        Firstname = "MaintenanceFirst",
+            //        Lastname = "MaintenanceLast",
+            //        Email = "maintenance@gmail.co.nz",
+            //        Role = "Maintenance Manager",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    /// -------------------- Office Staff --------------------
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|33",
+            //        Firstname = "Office1First",
+            //        Lastname = "Office1Last",
+            //        Email = "office1@gmail.co.nz",
+            //        Role = "Office Staff",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|34",
+            //        Firstname = "Office2First",
+            //        Lastname = "Office2Last",
+            //        Email = "office2@gmail.co.nz",
+            //        Role = "Office Staff",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    /// -------------------- Admin --------------------
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|35",
+            //        Firstname = "Adam",
+            //        Lastname = "Leask",
+            //        Email = "adam@ilt.co.nz",
+            //        Role = "Admin",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    },
+            //    new Account()
+            //    {
+            //        AccountID = "auth0|36",
+            //        Firstname = "Kris",
+            //        Lastname = "Leatherby",
+            //        Email = "kris@ilt.co.nz",
+            //        Role = "Admin",
+            //        Rate = null,
+            //        RateOT = null,
+            //        TradeID = null,
+            //        EstablishmentID = null,
+            //        JobSheets = null
+            //    }
+            //);
             // -------------------------------------------------- ChargeCode --------------------------------------------------
             builder.Entity<ChargeCode>().HasData(
                 new ChargeCode()
@@ -1522,7 +1486,7 @@ namespace _701_WebAPI.Data
             );
             // -------------------------------------------------- Job --------------------------------------------------
             builder.Entity<Job>().HasData(
-                /// -------------------- Employee 1 --------------------
+                /// -------------------- Rickelle Dempster --------------------
                 new Job()
                 {
                     JobID = 1,
@@ -1535,7 +1499,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
                     ChargeCodeID = 1,
-                    AccountID = 1,
+                    AccountID = "auth0|6332c7bb35450ad949086866",
                 },
                 new Job()
                 {
@@ -1549,7 +1513,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
                     ChargeCodeID = 1,
-                    AccountID = 1,
+                    AccountID = "auth0|6332c7bb35450ad949086866",
                 },
                 new Job()
                 {
@@ -1563,7 +1527,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
                     ChargeCodeID = 1,
-                    AccountID = 1,
+                    AccountID = "auth0|6332c7bb35450ad949086866",
                 },
                 new Job()
                 {
@@ -1577,9 +1541,9 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 6,
                     EstablishmentID = 16,
                     ChargeCodeID = 1,
-                    AccountID = 1,
+                    AccountID = "auth0|6332c7bb35450ad949086866",
                 },
-                /// -------------------- Employee 2 --------------------
+                /// -------------------- Wayne Dimmock --------------------
                 new Job()
                 {
                     JobID = 5,
@@ -1592,7 +1556,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
                     ChargeCodeID = 2,
-                    AccountID = 2,
+                    AccountID = "auth0|2",
                 },
                 new Job()
                 {
@@ -1606,7 +1570,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
                     ChargeCodeID = 2,
-                    AccountID = 2,
+                    AccountID = "auth0|2",
                 },
                 new Job()
                 {
@@ -1620,9 +1584,9 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
                     ChargeCodeID = 2,
-                    AccountID = 2,
+                    AccountID = "auth0|2",
                 },
-                /// -------------------- Employee 3 --------------------
+                /// -------------------- Brent Mallon --------------------
                 new Job()
                 {
                     JobID = 8,
@@ -1635,7 +1599,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 10,
                     EstablishmentID = 1,
                     ChargeCodeID = 1,
-                    AccountID = 3,
+                    AccountID = "auth0|3",
                 },
                 new Job()
                 {
@@ -1649,9 +1613,9 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 10,
                     EstablishmentID = 1,
                     ChargeCodeID = 1,
-                    AccountID = 3,
+                    AccountID = "auth0|3",
                 },
-                /// -------------------- Employee 4 --------------------
+                /// -------------------- Brian Walker --------------------
                 new Job()
                 {
                     JobID = 10,
@@ -1664,7 +1628,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 3,
                     EstablishmentID = 11,
                     ChargeCodeID = 1,
-                    AccountID = 6,
+                    AccountID = "auth0|6",
                 },
                 new Job()
                 {
@@ -1678,7 +1642,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 3,
                     EstablishmentID = 11,
                     ChargeCodeID = 1,
-                    AccountID = 6,
+                    AccountID = "auth0|6",
                 }
             );
             // -------------------------------------------------- Trade --------------------------------------------------

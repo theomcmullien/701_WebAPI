@@ -32,7 +32,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/Jobs/5
         [HttpGet("{accountID}")]
-        public async Task<ActionResult<IEnumerable<Job>>> GetJob(int accountID)
+        public async Task<ActionResult<IEnumerable<Job>>> GetJob(string accountID)
         {
             if (_context.Job == null) return NotFound();
 

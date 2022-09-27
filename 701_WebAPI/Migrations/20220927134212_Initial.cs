@@ -9,27 +9,6 @@ namespace _701_WebAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Account",
-                columns: table => new
-                {
-                    AccountID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Firstname = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Lastname = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Rate = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    RateOT = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
-                    TradeID = table.Column<int>(type: "int", nullable: true),
-                    EstablishmentID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Account", x => x.AccountID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "ChargeCode",
                 columns: table => new
                 {
@@ -103,7 +82,7 @@ namespace _701_WebAPI.Migrations
                     FinancialPeriodID = table.Column<int>(type: "int", nullable: true),
                     EstablishmentID = table.Column<int>(type: "int", nullable: false),
                     ChargeCodeID = table.Column<int>(type: "int", nullable: false),
-                    AccountID = table.Column<int>(type: "int", nullable: false)
+                    AccountID = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -124,49 +103,6 @@ namespace _701_WebAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Account",
-                columns: new[] { "AccountID", "Email", "EstablishmentID", "Firstname", "Lastname", "Password", "Rate", "RateOT", "Role", "TradeID" },
-                values: new object[,]
-                {
-                    { 1, "rdempster@gmail.com", null, "Rickelle", "Dempster", "123", 50.00m, 0m, "Employee", 1 },
-                    { 2, "wdimmock@gmail.com", null, "Wayne", "Dimmock", "123", 50.00m, 56.00m, "Employee", 2 },
-                    { 3, "bmallon@gmail.com", null, "Brent", "Mallon", "123", 50.00m, 66.00m, "Employee", 3 },
-                    { 4, "lmilne@gmail.com", null, "Logan", "Milne", "123", 50.00m, 0m, "Employee", 1 },
-                    { 5, "jscully@gmail.com", null, "Jim", "Scully", "123", 50.00m, 0m, "Employee", 4 },
-                    { 6, "bwalker@gmail.com", null, "Brian", "Walker", "123", 52.00m, 0m, "Employee", 5 },
-                    { 7, "dean@ascotparkhotel.co.nz", 1, "Dean", "Nicol", "123", null, null, "Establishment Manager", null },
-                    { 8, "manager@kelvinhotel.co.nz", 2, "Jo", "Harris", "123", null, null, "Establishment Manager", null },
-                    { 9, "manager@villamotel.co.nz", 3, "Natalie", "Gilson", "123", null, null, "Establishment Manager", null },
-                    { 10, "manager@balmoralmotel.co.nz", 4, "Sharon", "Hinga", "123", null, null, "Establishment Manager", null },
-                    { 11, "manager@cablecourtmotel.co.nz", 5, "Allie", "Adams-Bell", "123", null, null, "Establishment Manager", null },
-                    { 12, "manager@cablecourtmotel.co.nz", 5, "Lindsay", "Adams-Bell", "123", null, null, "Establishment Manager", null },
-                    { 13, "manager@ashfordmotorlodge.co.nz", 6, "Shelley", "Jenkins", "123", null, null, "Establishment Manager", null },
-                    { 14, "manager@easternsuburbs.co.nz", 7, "James", "Wesney", "123", null, null, "Establishment Manager", null },
-                    { 15, "manager@newfieldtavern.co.nz", 8, "Jemma", "Wild", "123", null, null, "Establishment Manager", null },
-                    { 16, "manager@northerntavern.co.nz", 9, "Northern", "Manager", "123", null, null, "Establishment Manager", null },
-                    { 17, "manager@avenalhomestead.co.nz", 10, "Shanan", "Te-Maiharoa", "123", null, null, "Establishment Manager", null },
-                    { 18, "manager@waikiwitavern.co.nz", 11, "Vicky", "Cole", "123", null, null, "Establishment Manager", null },
-                    { 19, "manager@lonestarinv.co.nz", 12, "Lonestar", "Manager", "123", null, null, "Establishment Manager", null },
-                    { 20, "manager@southlandtavern.co.nz", 13, "Jo", "Te-Maiharoa", "123", null, null, "Establishment Manager", null },
-                    { 21, "manager@speightsalehouseinv.co.nz", 14, "Sam", "Harpur", "123", null, null, "Establishment Manager", null },
-                    { 22, "manager@waxys.co.nz", 15, "Kelly", "Burgess", "123", null, null, "Establishment Manager", null },
-                    { 23, "manager@liquorlandsouthcity.co.nz", 16, "Mary-Ellen", "Vercoe", "123", null, null, "Establishment Manager", null },
-                    { 24, "manager@superliquorcollingwood.co.nz", 17, "Warren", "Tayles", "123", null, null, "Establishment Manager", null },
-                    { 25, "manager@eastendliquor.co.nz", 18, "Tracy", "Poe", "123", null, null, "Establishment Manager", null },
-                    { 26, "manager@windsorwines.co.nz", 19, "Stephane", "Fabre", "123", null, null, "Establishment Manager", null },
-                    { 27, "manager@superliquorsouthland.co.nz", 20, "Simon", "Paterson", "123", null, null, "Establishment Manager", null },
-                    { 28, "cate@ascotparkhotel.co.nz", 21, "Cate", "Wesney", "123", null, null, "Establishment Manager", null },
-                    { 29, "manager@liquorlandcentrepoint.co.nz", 22, "Nicola", "Moss", "123", null, null, "Establishment Manager", null },
-                    { 30, "bryan@thelanglands.co.nz", 23, "Bryan", "Townley", "123", null, null, "Establishment Manager", null },
-                    { 31, "bevan@ilt.co.nz", 24, "Bevan", "Thompson", "123", null, null, "Establishment Manager", null },
-                    { 32, "maintenance@gmail.co.nz", null, "MaintenanceFirst", "MaintenanceLast", "123", null, null, "Maintenance Manager", null },
-                    { 33, "office1@gmail.co.nz", null, "Office1First", "Office1Last", "123", null, null, "Office Staff", null },
-                    { 34, "office2@gmail.co.nz", null, "Office2First", "Office2Last", "123", null, null, "Office Staff", null },
-                    { 35, "adam@ilt.co.nz", null, "Adam", "Leask", "123", null, null, "Admin", null },
-                    { 36, "kris@ilt.co.nz", null, "Kris", "Leatherby", "123", null, null, "Admin", null }
-                });
-
-            migrationBuilder.InsertData(
                 table: "ChargeCode",
                 columns: new[] { "ChargeCodeID", "Code", "Name" },
                 values: new object[,]
@@ -176,14 +112,7 @@ namespace _701_WebAPI.Migrations
                     { 3, "746211", "COAL BOILER" },
                     { 4, "746212", "COAL FEED EQUIPMENT" },
                     { 5, "746213", "DIESEL BOILER" },
-                    { 6, "746214", "STEAM BOILER" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "ChargeCode",
-                columns: new[] { "ChargeCodeID", "Code", "Name" },
-                values: new object[,]
-                {
+                    { 6, "746214", "STEAM BOILER" },
                     { 7, "746215", "ELECTRIC BOILER" },
                     { 8, "746221", "HEAT CIRCULATION PUMPS" },
                     { 9, "746222", "HEATING MAINTENANCE" },
@@ -219,19 +148,22 @@ namespace _701_WebAPI.Migrations
                     { 39, "746276", "BUILDING W.O.F." },
                     { 40, "746277", "N.Z. FIRE SERVICE COSTS" },
                     { 41, "746278", "LIFT MAINTENANCE" },
-                    { 42, "746279", "FIRE ALARM CALL OUTS" },
-                    { 43, "746280", "BEER LINE CLEANING" },
-                    { 44, "746281", "TOILET FLUSH VALVES" },
-                    { 45, "746291", "PROMOTIONAL" },
-                    { 46, "7685", "NON BUDGET COSTS" },
-                    { 47, "746296", "NURSERY COSTS - LAWNS" },
-                    { 48, "746297", "NURSERY COSTS - GARDENS" }
+                    { 42, "746279", "FIRE ALARM CALL OUTS" }
                 });
 
             migrationBuilder.InsertData(
                 table: "ChargeCode",
                 columns: new[] { "ChargeCodeID", "Code", "Name" },
-                values: new object[] { 49, "747500", "OTHER" });
+                values: new object[,]
+                {
+                    { 43, "746280", "BEER LINE CLEANING" },
+                    { 44, "746281", "TOILET FLUSH VALVES" },
+                    { 45, "746291", "PROMOTIONAL" },
+                    { 46, "7685", "NON BUDGET COSTS" },
+                    { 47, "746296", "NURSERY COSTS - LAWNS" },
+                    { 48, "746297", "NURSERY COSTS - GARDENS" },
+                    { 49, "747500", "OTHER" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Establishment",
@@ -279,13 +211,7 @@ namespace _701_WebAPI.Migrations
                     { 8, 1, 2 },
                     { 9, 2, 2 },
                     { 10, 43, 2 },
-                    { 11, 1, 3 },
-                    { 12, 2, 3 },
-                    { 13, 1, 4 },
-                    { 14, 2, 4 },
-                    { 15, 1, 5 },
-                    { 16, 2, 5 },
-                    { 17, 1, 6 }
+                    { 11, 1, 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -293,6 +219,12 @@ namespace _701_WebAPI.Migrations
                 columns: new[] { "EstablishmentCodeID", "ChargeCodeID", "EstablishmentID" },
                 values: new object[,]
                 {
+                    { 12, 2, 3 },
+                    { 13, 1, 4 },
+                    { 14, 2, 4 },
+                    { 15, 1, 5 },
+                    { 16, 2, 5 },
+                    { 17, 1, 6 },
                     { 18, 2, 6 },
                     { 19, 1, 7 },
                     { 20, 2, 7 },
@@ -328,13 +260,7 @@ namespace _701_WebAPI.Migrations
                     { 50, 2, 16 },
                     { 51, 43, 16 },
                     { 52, 1, 17 },
-                    { 53, 2, 17 },
-                    { 54, 43, 17 },
-                    { 55, 1, 18 },
-                    { 56, 2, 18 },
-                    { 57, 43, 18 },
-                    { 58, 1, 19 },
-                    { 59, 2, 19 }
+                    { 53, 2, 17 }
                 });
 
             migrationBuilder.InsertData(
@@ -342,6 +268,12 @@ namespace _701_WebAPI.Migrations
                 columns: new[] { "EstablishmentCodeID", "ChargeCodeID", "EstablishmentID" },
                 values: new object[,]
                 {
+                    { 54, 43, 17 },
+                    { 55, 1, 18 },
+                    { 56, 2, 18 },
+                    { 57, 43, 18 },
+                    { 58, 1, 19 },
+                    { 59, 2, 19 },
                     { 60, 1, 20 },
                     { 61, 2, 20 },
                     { 62, 43, 20 },
@@ -376,17 +308,17 @@ namespace _701_WebAPI.Migrations
                 columns: new[] { "JobID", "AccountID", "ChargeCodeID", "EstablishmentID", "FinancialPeriodID", "FinishTime", "Hours", "HoursOT", "IsCompleted", "Notes", "StartTime" },
                 values: new object[,]
                 {
-                    { 1, 1, 1, 16, 6, "08/29/2022 10:45", 5.25, 0.0, true, "Just started painting the entirety of south city liquorland", "08/29/2022 05:30" },
-                    { 2, 1, 1, 16, 6, "08/29/2022 17:00", 4.0, 0.0, true, "Continued painting the entirety of south city liquorland", "08/29/2022 13:00" },
-                    { 3, 1, 1, 16, 6, "09/15/2023 12:45", 6.75, 0.0, true, "Continued painting the entirety of south city liquorland", "09/15/2022 06:00" },
-                    { 4, 1, 1, 16, 6, "09/17/2022 09:00", 3.0, 0.0, true, "Just finished painting the entirety of south city liquorland by myself", "09/17/2022 06:00" },
-                    { 5, 2, 2, 15, 4, "06/13/2022 13:00", 8.0, 0.0, true, "Just finished building some chairs for waxys", "06/13/2022 05:00" },
-                    { 6, 2, 2, 15, 4, "06/14/2022 10:00", 5.0, 0.0, true, "Just started building some tables for waxys", "06/14/2022 05:00" },
-                    { 7, 2, 2, 15, 4, "06/15/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "06/15/2022 07:30" },
-                    { 8, 3, 1, 1, 10, "01/04/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "01/04/2023 05:30" },
-                    { 9, 3, 1, 1, 10, "01/06/2023 13:00", 8.0, 0.0, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "01/06/2023 05:00" },
-                    { 10, 6, 1, 11, 3, "06/16/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "06/16/2022 13:00" },
-                    { 11, 6, 1, 11, 3, "06/18/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "06/18/2022 12:00" }
+                    { 1, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "08/29/2022 10:45", 5.25, 0.0, true, "Just started painting the entirety of south city liquorland", "08/29/2022 05:30" },
+                    { 2, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "08/29/2022 17:00", 4.0, 0.0, true, "Continued painting the entirety of south city liquorland", "08/29/2022 13:00" },
+                    { 3, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "09/15/2023 12:45", 6.75, 0.0, true, "Continued painting the entirety of south city liquorland", "09/15/2022 06:00" },
+                    { 4, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "09/17/2022 09:00", 3.0, 0.0, true, "Just finished painting the entirety of south city liquorland by myself", "09/17/2022 06:00" },
+                    { 5, "auth0|2", 2, 15, 4, "06/13/2022 13:00", 8.0, 0.0, true, "Just finished building some chairs for waxys", "06/13/2022 05:00" },
+                    { 6, "auth0|2", 2, 15, 4, "06/14/2022 10:00", 5.0, 0.0, true, "Just started building some tables for waxys", "06/14/2022 05:00" },
+                    { 7, "auth0|2", 2, 15, 4, "06/15/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "06/15/2022 07:30" },
+                    { 8, "auth0|3", 1, 1, 10, "01/04/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "01/04/2023 05:30" },
+                    { 9, "auth0|3", 1, 1, 10, "01/06/2023 13:00", 8.0, 0.0, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "01/06/2023 05:00" },
+                    { 10, "auth0|6", 1, 11, 3, "06/16/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "06/16/2022 13:00" },
+                    { 11, "auth0|6", 1, 11, 3, "06/18/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "06/18/2022 12:00" }
                 });
 
             migrationBuilder.InsertData(
@@ -398,16 +330,17 @@ namespace _701_WebAPI.Migrations
                     { 2, "Carpenter" },
                     { 3, "Plumber" },
                     { 4, "Beer Serviceman" },
-                    { 5, "Electrican" },
-                    { 6, "Gardener" }
+                    { 5, "Electrican" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Trade",
+                columns: new[] { "TradeID", "Type" },
+                values: new object[] { 6, "Gardener" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Account");
-
             migrationBuilder.DropTable(
                 name: "ChargeCode");
 

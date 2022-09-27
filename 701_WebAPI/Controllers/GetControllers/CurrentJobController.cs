@@ -18,7 +18,7 @@ namespace _701_WebAPI.Controllers.GetControllers
 
         // GET: api/Jobs/5
         [HttpGet("{accountID}")]
-        public async Task<ActionResult<Job>> GetJob(int accountID)
+        public async Task<ActionResult<Job>> GetJob(string accountID)
         {
             if (_context.Job == null) return NotFound();
 

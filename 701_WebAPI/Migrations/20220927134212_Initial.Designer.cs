@@ -12,7 +12,7 @@ using _701_WebAPI.Data;
 namespace _701_WebAPI.Migrations
 {
     [DbContext(typeof(_701_WebAPIContext))]
-    [Migration("20220920134730_Initial")]
+    [Migration("20220927134212_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,415 +23,6 @@ namespace _701_WebAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("_701_WebAPI.Models.Account", b =>
-                {
-                    b.Property<int>("AccountID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountID"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("EstablishmentID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Firstname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Lastname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal?>("Rate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal?>("RateOT")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Role")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TradeID")
-                        .HasColumnType("int");
-
-                    b.HasKey("AccountID");
-
-                    b.ToTable("Account");
-
-                    b.HasData(
-                        new
-                        {
-                            AccountID = 1,
-                            Email = "rdempster@gmail.com",
-                            Firstname = "Rickelle",
-                            Lastname = "Dempster",
-                            Password = "123",
-                            Rate = 50.00m,
-                            RateOT = 0m,
-                            Role = "Employee",
-                            TradeID = 1
-                        },
-                        new
-                        {
-                            AccountID = 2,
-                            Email = "wdimmock@gmail.com",
-                            Firstname = "Wayne",
-                            Lastname = "Dimmock",
-                            Password = "123",
-                            Rate = 50.00m,
-                            RateOT = 56.00m,
-                            Role = "Employee",
-                            TradeID = 2
-                        },
-                        new
-                        {
-                            AccountID = 3,
-                            Email = "bmallon@gmail.com",
-                            Firstname = "Brent",
-                            Lastname = "Mallon",
-                            Password = "123",
-                            Rate = 50.00m,
-                            RateOT = 66.00m,
-                            Role = "Employee",
-                            TradeID = 3
-                        },
-                        new
-                        {
-                            AccountID = 4,
-                            Email = "lmilne@gmail.com",
-                            Firstname = "Logan",
-                            Lastname = "Milne",
-                            Password = "123",
-                            Rate = 50.00m,
-                            RateOT = 0m,
-                            Role = "Employee",
-                            TradeID = 1
-                        },
-                        new
-                        {
-                            AccountID = 5,
-                            Email = "jscully@gmail.com",
-                            Firstname = "Jim",
-                            Lastname = "Scully",
-                            Password = "123",
-                            Rate = 50.00m,
-                            RateOT = 0m,
-                            Role = "Employee",
-                            TradeID = 4
-                        },
-                        new
-                        {
-                            AccountID = 6,
-                            Email = "bwalker@gmail.com",
-                            Firstname = "Brian",
-                            Lastname = "Walker",
-                            Password = "123",
-                            Rate = 52.00m,
-                            RateOT = 0m,
-                            Role = "Employee",
-                            TradeID = 5
-                        },
-                        new
-                        {
-                            AccountID = 7,
-                            Email = "dean@ascotparkhotel.co.nz",
-                            EstablishmentID = 1,
-                            Firstname = "Dean",
-                            Lastname = "Nicol",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 8,
-                            Email = "manager@kelvinhotel.co.nz",
-                            EstablishmentID = 2,
-                            Firstname = "Jo",
-                            Lastname = "Harris",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 9,
-                            Email = "manager@villamotel.co.nz",
-                            EstablishmentID = 3,
-                            Firstname = "Natalie",
-                            Lastname = "Gilson",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 10,
-                            Email = "manager@balmoralmotel.co.nz",
-                            EstablishmentID = 4,
-                            Firstname = "Sharon",
-                            Lastname = "Hinga",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 11,
-                            Email = "manager@cablecourtmotel.co.nz",
-                            EstablishmentID = 5,
-                            Firstname = "Allie",
-                            Lastname = "Adams-Bell",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 12,
-                            Email = "manager@cablecourtmotel.co.nz",
-                            EstablishmentID = 5,
-                            Firstname = "Lindsay",
-                            Lastname = "Adams-Bell",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 13,
-                            Email = "manager@ashfordmotorlodge.co.nz",
-                            EstablishmentID = 6,
-                            Firstname = "Shelley",
-                            Lastname = "Jenkins",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 14,
-                            Email = "manager@easternsuburbs.co.nz",
-                            EstablishmentID = 7,
-                            Firstname = "James",
-                            Lastname = "Wesney",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 15,
-                            Email = "manager@newfieldtavern.co.nz",
-                            EstablishmentID = 8,
-                            Firstname = "Jemma",
-                            Lastname = "Wild",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 16,
-                            Email = "manager@northerntavern.co.nz",
-                            EstablishmentID = 9,
-                            Firstname = "Northern",
-                            Lastname = "Manager",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 17,
-                            Email = "manager@avenalhomestead.co.nz",
-                            EstablishmentID = 10,
-                            Firstname = "Shanan",
-                            Lastname = "Te-Maiharoa",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 18,
-                            Email = "manager@waikiwitavern.co.nz",
-                            EstablishmentID = 11,
-                            Firstname = "Vicky",
-                            Lastname = "Cole",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 19,
-                            Email = "manager@lonestarinv.co.nz",
-                            EstablishmentID = 12,
-                            Firstname = "Lonestar",
-                            Lastname = "Manager",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 20,
-                            Email = "manager@southlandtavern.co.nz",
-                            EstablishmentID = 13,
-                            Firstname = "Jo",
-                            Lastname = "Te-Maiharoa",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 21,
-                            Email = "manager@speightsalehouseinv.co.nz",
-                            EstablishmentID = 14,
-                            Firstname = "Sam",
-                            Lastname = "Harpur",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 22,
-                            Email = "manager@waxys.co.nz",
-                            EstablishmentID = 15,
-                            Firstname = "Kelly",
-                            Lastname = "Burgess",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 23,
-                            Email = "manager@liquorlandsouthcity.co.nz",
-                            EstablishmentID = 16,
-                            Firstname = "Mary-Ellen",
-                            Lastname = "Vercoe",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 24,
-                            Email = "manager@superliquorcollingwood.co.nz",
-                            EstablishmentID = 17,
-                            Firstname = "Warren",
-                            Lastname = "Tayles",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 25,
-                            Email = "manager@eastendliquor.co.nz",
-                            EstablishmentID = 18,
-                            Firstname = "Tracy",
-                            Lastname = "Poe",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 26,
-                            Email = "manager@windsorwines.co.nz",
-                            EstablishmentID = 19,
-                            Firstname = "Stephane",
-                            Lastname = "Fabre",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 27,
-                            Email = "manager@superliquorsouthland.co.nz",
-                            EstablishmentID = 20,
-                            Firstname = "Simon",
-                            Lastname = "Paterson",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 28,
-                            Email = "cate@ascotparkhotel.co.nz",
-                            EstablishmentID = 21,
-                            Firstname = "Cate",
-                            Lastname = "Wesney",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 29,
-                            Email = "manager@liquorlandcentrepoint.co.nz",
-                            EstablishmentID = 22,
-                            Firstname = "Nicola",
-                            Lastname = "Moss",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 30,
-                            Email = "bryan@thelanglands.co.nz",
-                            EstablishmentID = 23,
-                            Firstname = "Bryan",
-                            Lastname = "Townley",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 31,
-                            Email = "bevan@ilt.co.nz",
-                            EstablishmentID = 24,
-                            Firstname = "Bevan",
-                            Lastname = "Thompson",
-                            Password = "123",
-                            Role = "Establishment Manager"
-                        },
-                        new
-                        {
-                            AccountID = 32,
-                            Email = "maintenance@gmail.co.nz",
-                            Firstname = "MaintenanceFirst",
-                            Lastname = "MaintenanceLast",
-                            Password = "123",
-                            Role = "Maintenance Manager"
-                        },
-                        new
-                        {
-                            AccountID = 33,
-                            Email = "office1@gmail.co.nz",
-                            Firstname = "Office1First",
-                            Lastname = "Office1Last",
-                            Password = "123",
-                            Role = "Office Staff"
-                        },
-                        new
-                        {
-                            AccountID = 34,
-                            Email = "office2@gmail.co.nz",
-                            Firstname = "Office2First",
-                            Lastname = "Office2Last",
-                            Password = "123",
-                            Role = "Office Staff"
-                        },
-                        new
-                        {
-                            AccountID = 35,
-                            Email = "adam@ilt.co.nz",
-                            Firstname = "Adam",
-                            Lastname = "Leask",
-                            Password = "123",
-                            Role = "Admin"
-                        },
-                        new
-                        {
-                            AccountID = 36,
-                            Email = "kris@ilt.co.nz",
-                            Firstname = "Kris",
-                            Lastname = "Leatherby",
-                            Password = "123",
-                            Role = "Admin"
-                        });
-                });
 
             modelBuilder.Entity("_701_WebAPI.Models.ChargeCode", b =>
                 {
@@ -1482,8 +1073,9 @@ namespace _701_WebAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JobID"), 1L, 1);
 
-                    b.Property<int>("AccountID")
-                        .HasColumnType("int");
+                    b.Property<string>("AccountID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ChargeCodeID")
                         .HasColumnType("int");
@@ -1520,7 +1112,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 1,
-                            AccountID = 1,
+                            AccountID = "auth0|6332c7bb35450ad949086866",
                             ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
@@ -1534,7 +1126,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 2,
-                            AccountID = 1,
+                            AccountID = "auth0|6332c7bb35450ad949086866",
                             ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
@@ -1548,7 +1140,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 3,
-                            AccountID = 1,
+                            AccountID = "auth0|6332c7bb35450ad949086866",
                             ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
@@ -1562,7 +1154,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 4,
-                            AccountID = 1,
+                            AccountID = "auth0|6332c7bb35450ad949086866",
                             ChargeCodeID = 1,
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
@@ -1576,7 +1168,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 5,
-                            AccountID = 2,
+                            AccountID = "auth0|2",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
@@ -1590,7 +1182,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 6,
-                            AccountID = 2,
+                            AccountID = "auth0|2",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
@@ -1604,7 +1196,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 7,
-                            AccountID = 2,
+                            AccountID = "auth0|2",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
@@ -1618,7 +1210,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 8,
-                            AccountID = 3,
+                            AccountID = "auth0|3",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
                             FinancialPeriodID = 10,
@@ -1632,7 +1224,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 9,
-                            AccountID = 3,
+                            AccountID = "auth0|3",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
                             FinancialPeriodID = 10,
@@ -1646,7 +1238,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 10,
-                            AccountID = 6,
+                            AccountID = "auth0|6",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
                             FinancialPeriodID = 3,
@@ -1660,7 +1252,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 11,
-                            AccountID = 6,
+                            AccountID = "auth0|6",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
                             FinancialPeriodID = 3,

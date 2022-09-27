@@ -15,7 +15,7 @@
         public int? FinancialPeriodID { get; set; }
         public int EstablishmentID { get; set; }
         public int ChargeCodeID { get; set; }
-        public int AccountID { get; set; }
+        public string AccountID { get; set; }
         
     }
 }

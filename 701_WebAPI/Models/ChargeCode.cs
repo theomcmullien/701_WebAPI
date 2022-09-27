@@ -1,4 +1,7 @@
-﻿namespace _701_WebAPI.Models
+﻿global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+
+namespace _701_WebAPI.Models
 {
     public class ChargeCode
     {
