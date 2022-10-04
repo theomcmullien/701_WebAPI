@@ -15,5 +15,10 @@ namespace _701_WebAPI.Models.Auth0
         //establishment manager
         [JsonProperty("establishmentID")]
         public int EstablishmentID { get; set; }
+
+        //role
+        [JsonProperty("role")]
+        public string? Role { get; set; }
+
     }
 }
