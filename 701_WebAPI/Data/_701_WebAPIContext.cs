@@ -12,7 +12,7 @@ namespace _701_WebAPI.Data
         public _701_WebAPIContext (DbContextOptions<_701_WebAPIContext> options) : base(options)
         {
         }
-
+        
         //public DbSet<Account>? Account { get; set; }
         public DbSet<ChargeCode>? ChargeCode { get; set; }
         public DbSet<Establishment>? Establishment { get; set; }
