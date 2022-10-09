@@ -93,20 +93,31 @@ namespace _701_WebAPI.Controllers
             {
                 if (_context.FinancialPeriod == null) return BadRequest();
 
-                job.JobID = await _context.Job.Where(j => !j.IsCompleted && j.AccountID == job.AccountID).Select(j => j.JobID).FirstAsync();
+                if (job.StartTime != null && job.FinishTime != null)
+                {
+                    var fList = await _context.FinancialPeriod.ToListAsync();
+                    string fmt = "MM/dd/yyyy HH:mm";
+                    try
+                    {
+                        job.FinancialPeriodID = fList.Where(f => DateTime.ParseExact(f.StartDate, fmt, null) < DateTime.ParseExact(job.StartTime, fmt, null) && DateTime.ParseExact(f.EndDate, fmt, null) > DateTime.ParseExact(job.StartTime, fmt, null)).Select(f => f.FinancialPeriodID).First();
+                    }
+                    catch (Exception)
+                    {
+                        job.FinancialPeriodID = null;
+                    }
+                }
+                else return BadRequest();
 
-                var fList = await _context.FinancialPeriod.ToListAsync();
-                string fmt = "MM/dd/yyyy HH:mm";
                 try
                 {
-                    job.FinancialPeriodID = fList.Where(f => DateTime.ParseExact(f.StartDate, fmt, null) < DateTime.ParseExact(job.StartTime, fmt, null) && DateTime.ParseExact(f.EndDate, fmt, null) > DateTime.ParseExact(job.StartTime, fmt, null)).Select(f => f.FinancialPeriodID).First();
+                    job.JobID = await _context.Job.Where(j => !j.IsCompleted && j.AccountID == job.AccountID).Select(j => j.JobID).FirstAsync();
+                    await PutJob(job.JobID, job);
                 }
                 catch (Exception)
                 {
-                    job.FinancialPeriodID = null;
+                    _context.Job.Add(job);
+                    await _context.SaveChangesAsync();
                 }
-                
-                await PutJob(job.JobID, job);
             }
             else
             {
