@@ -12,7 +12,7 @@ using _701_WebAPI.Data;
 namespace _701_WebAPI.Migrations
 {
     [DbContext(typeof(_701_WebAPIContext))]
-    [Migration("20221004213329_Initial")]
+    [Migration("20221011142451_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1131,8 +1131,8 @@ namespace _701_WebAPI.Migrations
                             EstablishmentID = 16,
                             FinancialPeriodID = 6,
                             FinishTime = "08/29/2022 17:00",
-                            Hours = 4.0,
-                            HoursOT = 0.0,
+                            Hours = 8.0,
+                            HoursOT = 1.0,
                             IsCompleted = true,
                             Notes = "Continued painting the entirety of south city liquorland",
                             StartTime = "08/29/2022 13:00"
@@ -1168,13 +1168,13 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 5,
-                            AccountID = "auth0|2",
+                            AccountID = "auth0|634575dbe16807ccd2b3818d",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
                             FinishTime = "06/13/2022 13:00",
                             Hours = 8.0,
-                            HoursOT = 0.0,
+                            HoursOT = 0.5,
                             IsCompleted = true,
                             Notes = "Just finished building some chairs for waxys",
                             StartTime = "06/13/2022 05:00"
@@ -1182,7 +1182,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 6,
-                            AccountID = "auth0|2",
+                            AccountID = "auth0|634575dbe16807ccd2b3818d",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
@@ -1196,7 +1196,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 7,
-                            AccountID = "auth0|2",
+                            AccountID = "auth0|634575dbe16807ccd2b3818d",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
                             FinancialPeriodID = 4,
@@ -1210,7 +1210,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 8,
-                            AccountID = "auth0|3",
+                            AccountID = "auth0|634576856f00df75fed2d2ed",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
                             FinancialPeriodID = 10,
@@ -1224,13 +1224,13 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 9,
-                            AccountID = "auth0|3",
+                            AccountID = "auth0|634576856f00df75fed2d2ed",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
                             FinancialPeriodID = 10,
                             FinishTime = "01/06/2023 13:00",
                             Hours = 8.0,
-                            HoursOT = 0.0,
+                            HoursOT = 1.5,
                             IsCompleted = true,
                             Notes = "Did some plumbing out at the ascot, a pipe under the sink was leaking",
                             StartTime = "01/06/2023 05:00"
@@ -1238,7 +1238,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 10,
-                            AccountID = "auth0|6",
+                            AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
                             FinancialPeriodID = 3,
@@ -1252,7 +1252,7 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 11,
-                            AccountID = "auth0|6",
+                            AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
                             FinancialPeriodID = 3,

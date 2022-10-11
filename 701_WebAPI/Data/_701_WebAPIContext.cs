@@ -41,7 +41,7 @@ namespace _701_WebAPI.Data
             //    },
             //    new Account()
             //    {
-            //        AccountID = "auth0|2",
+            //        AccountID = "auth0|634575dbe16807ccd2b3818d",
             //        Firstname = "Wayne",
             //        Lastname = "Dimmock",
             //        Email = "wdimmock@gmail.com",
@@ -54,7 +54,7 @@ namespace _701_WebAPI.Data
             //    },
             //    new Account()
             //    {
-            //        AccountID = "auth0|3",
+            //        AccountID = "auth0|634576856f00df75fed2d2ed",
             //        Firstname = "Brent",
             //        Lastname = "Mallon",
             //        Email = "bmallon@gmail.com",
@@ -67,7 +67,7 @@ namespace _701_WebAPI.Data
             //    },
             //    new Account()
             //    {
-            //        AccountID = "auth0|4",
+            //        AccountID = "auth0|6345777c6f00df75fed2d2fb",
             //        Firstname = "Logan",
             //        Lastname = "Milne",
             //        Email = "lmilne@gmail.com",
@@ -80,7 +80,7 @@ namespace _701_WebAPI.Data
             //    },
             //    new Account()
             //    {
-            //        AccountID = "auth0|5",
+            //        AccountID = "auth0|634577c56f00df75fed2d2fe",
             //        Firstname = "Jim",
             //        Lastname = "Scully",
             //        Email = "jscully@gmail.com",
@@ -93,7 +93,7 @@ namespace _701_WebAPI.Data
             //    },
             //    new Account()
             //    {
-            //        AccountID = "auth0|6",
+            //        AccountID = "auth0|634578296072ed94c436db3c",
             //        Firstname = "Brian",
             //        Lastname = "Walker",
             //        Email = "bwalker@gmail.com",
@@ -433,10 +433,10 @@ namespace _701_WebAPI.Data
             //    /// -------------------- Maintenance Manager --------------------
             //    new Account()
             //    {
-            //        AccountID = "auth0|32",
-            //        Firstname = "MaintenanceFirst",
-            //        Lastname = "MaintenanceLast",
-            //        Email = "maintenance@gmail.co.nz",
+            //        AccountID = "auth0|63338d1dae15c2aa3364d822",
+            //        Firstname = "Jeoggery",
+            //        Lastname = "Adonis",
+            //        Email = "maintenancemanager@gmail.co.nz",
             //        Role = "Maintenance Manager",
             //        Rate = null,
             //        RateOT = null,
@@ -447,10 +447,10 @@ namespace _701_WebAPI.Data
             //    /// -------------------- Office Staff --------------------
             //    new Account()
             //    {
-            //        AccountID = "auth0|33",
-            //        Firstname = "Office1First",
-            //        Lastname = "Office1Last",
-            //        Email = "office1@gmail.co.nz",
+            //        AccountID = "auth0|63338d57ae15c2aa3364d82f",
+            //        Firstname = "Jeffery",
+            //        Lastname = "Sparticus",
+            //        Email = "officestaff@gmail.co.nz",
             //        Role = "Office Staff",
             //        Rate = null,
             //        RateOT = null,
@@ -1506,8 +1506,8 @@ namespace _701_WebAPI.Data
                     JobID = 2,
                     StartTime = "08/29/2022 13:00",
                     FinishTime = "08/29/2022 17:00",
-                    Hours = 4,
-                    HoursOT = 0,
+                    Hours = 8,
+                    HoursOT = 1,
                     Notes = "Continued painting the entirety of south city liquorland",
                     IsCompleted = true,
                     FinancialPeriodID = 6,
@@ -1550,13 +1550,13 @@ namespace _701_WebAPI.Data
                     StartTime = "06/13/2022 05:00",
                     FinishTime = "06/13/2022 13:00",
                     Hours = 8,
-                    HoursOT = 0,
+                    HoursOT = 0.5,
                     Notes = "Just finished building some chairs for waxys",
                     IsCompleted = true,
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
                     ChargeCodeID = 2,
-                    AccountID = "auth0|2",
+                    AccountID = "auth0|634575dbe16807ccd2b3818d",
                 },
                 new Job()
                 {
@@ -1570,7 +1570,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
                     ChargeCodeID = 2,
-                    AccountID = "auth0|2",
+                    AccountID = "auth0|634575dbe16807ccd2b3818d",
                 },
                 new Job()
                 {
@@ -1584,7 +1584,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 4,
                     EstablishmentID = 15,
                     ChargeCodeID = 2,
-                    AccountID = "auth0|2",
+                    AccountID = "auth0|634575dbe16807ccd2b3818d",
                 },
                 /// -------------------- Brent Mallon --------------------
                 new Job()
@@ -1599,7 +1599,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 10,
                     EstablishmentID = 1,
                     ChargeCodeID = 1,
-                    AccountID = "auth0|3",
+                    AccountID = "auth0|634576856f00df75fed2d2ed",
                 },
                 new Job()
                 {
@@ -1607,13 +1607,13 @@ namespace _701_WebAPI.Data
                     StartTime = "01/06/2023 05:00",
                     FinishTime = "01/06/2023 13:00",
                     Hours = 8,
-                    HoursOT = 0,
+                    HoursOT = 1.5,
                     Notes = "Did some plumbing out at the ascot, a pipe under the sink was leaking",
                     IsCompleted = true,
                     FinancialPeriodID = 10,
                     EstablishmentID = 1,
                     ChargeCodeID = 1,
-                    AccountID = "auth0|3",
+                    AccountID = "auth0|634576856f00df75fed2d2ed",
                 },
                 /// -------------------- Brian Walker --------------------
                 new Job()
@@ -1628,7 +1628,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 3,
                     EstablishmentID = 11,
                     ChargeCodeID = 1,
-                    AccountID = "auth0|6",
+                    AccountID = "auth0|634578296072ed94c436db3c",
                 },
                 new Job()
                 {
@@ -1642,7 +1642,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 3,
                     EstablishmentID = 11,
                     ChargeCodeID = 1,
-                    AccountID = "auth0|6",
+                    AccountID = "auth0|634578296072ed94c436db3c",
                 }
             );
             // -------------------------------------------------- Trade --------------------------------------------------

@@ -85,7 +85,6 @@ namespace _701_WebAPI.Controllers.GetControllers
             foreach (Account a in accounts)
             {
                 var jobs = await _context.Job.Where(j => j.AccountID == a.AccountID && j.IsCompleted).ToListAsync();
-
                 List<List<Job>> llJobs = new List<List<Job>>();
 
                 foreach (Job j in jobs)
@@ -113,6 +112,7 @@ namespace _701_WebAPI.Controllers.GetControllers
                 foreach (var jList in llJobs)
                 {
                     string date = DateTime.ParseExact(jList[0].StartTime, fmt, null).ToShortDateString();
+
                     JobSheet jobSheet = new JobSheet()
                     {
                         Filename = string.Format("Job Sheet - {0} {1} - {2}", a.Firstname, a.Lastname, date),

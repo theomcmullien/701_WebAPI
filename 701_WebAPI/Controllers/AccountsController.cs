@@ -59,6 +59,8 @@ namespace _701_WebAPI.Controllers
                         continue;
                     }
 
+                    account.Role = a.MetaData.Role;
+
                     if (a.MetaData.Role.ToLower() == "employee")
                     {
                         account.Rate = a.MetaData.Rate;
