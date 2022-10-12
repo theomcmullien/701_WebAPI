@@ -26,7 +26,7 @@ namespace _701_WebAPI.Controllers.ReportControllers
         private readonly _701_WebAPIContext _context;
 
         static ICellStyle currencyStyle;
-        static string fmt = "MM/dd/yyyy HH:mm";
+        static string fmt = "dd/MM/yyyy HH:mm";
 
         public TransactionsHOsController(_701_WebAPIContext context)
         {
@@ -71,7 +71,7 @@ namespace _701_WebAPI.Controllers.ReportControllers
             string[] vars = date.Split("-");
             int month = int.Parse(vars[0]);
             int year = int.Parse(vars[1]);
-            string filepath = $"Data/ExcelReports/Transactions_HO_Export_{date}.xlsx";
+            string filepath = $"Data/ExcelReports/TransactionsHOExport/TransactionsHOExport_{date}.xlsx";
 
             List<Account> accounts = new List<Account>();
 
@@ -170,8 +170,9 @@ namespace _701_WebAPI.Controllers.ReportControllers
                 IRow row = sheet.CreateRow(newRow);
 
                 row.CreateCell(0).SetCellValue(item.Date);
-                row.CreateCell(1).SetCellValue($"{item.Hours} Std Hours");
-                if (item.HoursOT != 0) row.CreateCell(2).SetCellValue($"{item.HoursOT} OT Hours");
+                if (item.Hours != 0) row.CreateCell(1).SetCellValue(item.Hours.ToString());
+                else row.CreateCell(1).SetCellValue("");
+                if (item.HoursOT != 0) row.CreateCell(2).SetCellValue(item.HoursOT.ToString());
                 else row.CreateCell(2).SetCellValue("");
                 row.CreateCell(3).SetCellValue(item.Lastname.ToUpper());
                 row.CreateCell(4).SetCellValue(string.Format("${0:0.00}", item.Amount));

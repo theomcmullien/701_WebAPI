@@ -28,11 +28,11 @@ namespace _701_WebAPI.Controllers.GetControllers
             if (_context.Job == null) return NotFound();
             if (_context.Establishment == null) return NotFound();
 
-            string fmt = "MM/dd/yyyy HH:mm";
+            string fmt = "dd/MM/yyyy HH:mm";
             List<EmployeeCurrent> employeeCurrentList = new List<EmployeeCurrent>();
 
             List<Account> accounts = new List<Account>();
-
+            
             using (var client = new RestClient("https://dev-bss0r74x.au.auth0.com/api/v2/users"))
             {
                 var request = new RestRequest();

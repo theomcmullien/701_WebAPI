@@ -96,7 +96,7 @@ namespace _701_WebAPI.Controllers
                 if (job.StartTime != null && job.FinishTime != null)
                 {
                     var fList = await _context.FinancialPeriod.ToListAsync();
-                    string fmt = "MM/dd/yyyy HH:mm";
+                    string fmt = "dd/MM/yyyy HH:mm";
                     try
                     {
                         job.FinancialPeriodID = fList.Where(f => DateTime.ParseExact(f.StartDate, fmt, null) < DateTime.ParseExact(job.StartTime, fmt, null) && DateTime.ParseExact(f.EndDate, fmt, null) > DateTime.ParseExact(job.StartTime, fmt, null)).Select(f => f.FinancialPeriodID).First();

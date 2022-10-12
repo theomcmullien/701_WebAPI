@@ -1380,8 +1380,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 1,
                     Month = "April",
                     Weeks = 5,
-                    StartDate = "03/27/2022 00:00",
-                    EndDate = "05/01/2022 00:00",
+                    StartDate = "27/03/2022 00:00",
+                    EndDate = "01/05/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1389,8 +1389,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 2,
                     Month = "May",
                     Weeks = 4,
-                    StartDate = "05/01/2022 00:00",
-                    EndDate = "05/29/2022 00:00",
+                    StartDate = "01/05/2022 00:00",
+                    EndDate = "29/05/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1398,8 +1398,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 3,
                     Month = "June",
                     Weeks = 4,
-                    StartDate = "05/29/2022 00:00",
-                    EndDate = "06/26/2022 00:00",
+                    StartDate = "29/05/2022 00:00",
+                    EndDate = "26/06/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1407,8 +1407,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 4,
                     Month = "July",
                     Weeks = 5,
-                    StartDate = "06/26/2022 00:00",
-                    EndDate = "07/31/2022 00:00",
+                    StartDate = "26/06/2022 00:00",
+                    EndDate = "31/07/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1416,8 +1416,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 5,
                     Month = "August",
                     Weeks = 4,
-                    StartDate = "07/31/2022 00:00",
-                    EndDate = "08/28/2022 00:00",
+                    StartDate = "31/07/2022 00:00",
+                    EndDate = "28/08/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1425,8 +1425,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 6,
                     Month = "September",
                     Weeks = 5,
-                    StartDate = "08/28/2022 00:00",
-                    EndDate = "10/02/2022 00:00",
+                    StartDate = "28/08/2022 00:00",
+                    EndDate = "02/10/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1434,8 +1434,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 7,
                     Month = "October",
                     Weeks = 4,
-                    StartDate = "10/02/2022 00:00",
-                    EndDate = "10/30/2022 00:00",
+                    StartDate = "02/10/2022 00:00",
+                    EndDate = "30/10/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1443,8 +1443,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 8,
                     Month = "November",
                     Weeks = 4,
-                    StartDate = "10/30/2022 00:00",
-                    EndDate = "11/27/2022 00:00",
+                    StartDate = "30/10/2022 00:00",
+                    EndDate = "27/11/2022 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1452,7 +1452,7 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 9,
                     Month = "December",
                     Weeks = 5,
-                    StartDate = "11/27/2022 00:00",
+                    StartDate = "27/11/2022 00:00",
                     EndDate = "01/01/2023 00:00",
                     Year = 2022,
                 },
@@ -1462,7 +1462,7 @@ namespace _701_WebAPI.Data
                     Month = "January",
                     Weeks = 4,
                     StartDate = "01/01/2023 00:00",
-                    EndDate = "01/29/2023 00:00",
+                    EndDate = "29/01/2023 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1470,8 +1470,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 11,
                     Month = "February",
                     Weeks = 4,
-                    StartDate = "01/29/2023 00:00",
-                    EndDate = "02/26/2023 00:00",
+                    StartDate = "29/01/2023 00:00",
+                    EndDate = "26/02/2023 00:00",
                     Year = 2022,
                 },
                 new FinancialPeriod()
@@ -1479,8 +1479,8 @@ namespace _701_WebAPI.Data
                     FinancialPeriodID = 12,
                     Month = "March",
                     Weeks = 4,
-                    StartDate = "02/26/2023 00:00",
-                    EndDate = "04/02/2023 00:00",
+                    StartDate = "26/02/2023 00:00",
+                    EndDate = "02/04/2023 00:00",
                     Year = 2022,
                 }
             );
@@ -1490,8 +1490,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 1,
-                    StartTime = "08/29/2022 05:30",
-                    FinishTime = "08/29/2022 10:45",
+                    StartTime = "29/08/2022 05:30",
+                    FinishTime = "29/08/2022 10:45",
                     Hours = 5.25,
                     HoursOT = 0,
                     Notes = "Just started painting the entirety of south city liquorland",
@@ -1504,8 +1504,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 2,
-                    StartTime = "08/29/2022 13:00",
-                    FinishTime = "08/29/2022 17:00",
+                    StartTime = "29/08/2022 13:00",
+                    FinishTime = "29/08/2022 17:00",
                     Hours = 8,
                     HoursOT = 1,
                     Notes = "Continued painting the entirety of south city liquorland",
@@ -1518,8 +1518,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 3,
-                    StartTime = "09/15/2022 06:00",
-                    FinishTime = "09/15/2023 12:45",
+                    StartTime = "15/09/2022 06:00",
+                    FinishTime = "15/09/2022 12:45",
                     Hours = 6.75,
                     HoursOT = 0,
                     Notes = "Continued painting the entirety of south city liquorland",
@@ -1532,8 +1532,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 4,
-                    StartTime = "09/17/2022 06:00",
-                    FinishTime = "09/17/2022 09:00",
+                    StartTime = "17/09/2022 06:00",
+                    FinishTime = "17/09/2022 09:00",
                     Hours = 3,
                     HoursOT = 0,
                     Notes = "Just finished painting the entirety of south city liquorland by myself",
@@ -1547,8 +1547,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 5,
-                    StartTime = "06/13/2022 05:00",
-                    FinishTime = "06/13/2022 13:00",
+                    StartTime = "13/06/2022 05:00",
+                    FinishTime = "13/06/2022 13:00",
                     Hours = 8,
                     HoursOT = 0.5,
                     Notes = "Just finished building some chairs for waxys",
@@ -1561,8 +1561,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 6,
-                    StartTime = "06/14/2022 05:00",
-                    FinishTime = "06/14/2022 10:00",
+                    StartTime = "14/06/2022 05:00",
+                    FinishTime = "14/06/2022 10:00",
                     Hours = 5,
                     HoursOT = 0,
                     Notes = "Just started building some tables for waxys",
@@ -1575,8 +1575,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 7,
-                    StartTime = "06/15/2022 07:30",
-                    FinishTime = "06/15/2022 11:00",
+                    StartTime = "15/06/2022 07:30",
+                    FinishTime = "15/06/2022 11:00",
                     Hours = 3.5,
                     HoursOT = 0,
                     Notes = "Just finished building some tables for waxys",
@@ -1590,8 +1590,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 8,
-                    StartTime = "01/04/2023 05:30",
-                    FinishTime = "01/04/2023 13:00",
+                    StartTime = "04/01/2023 05:30",
+                    FinishTime = "04/01/2023 13:00",
                     Hours = 7.5,
                     HoursOT = 0,
                     Notes = "Did some plumbing out at the ascot",
@@ -1604,8 +1604,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 9,
-                    StartTime = "01/06/2023 05:00",
-                    FinishTime = "01/06/2023 13:00",
+                    StartTime = "06/01/2023 05:00",
+                    FinishTime = "06/01/2023 13:00",
                     Hours = 8,
                     HoursOT = 1.5,
                     Notes = "Did some plumbing out at the ascot, a pipe under the sink was leaking",
@@ -1619,8 +1619,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 10,
-                    StartTime = "06/16/2022 13:00",
-                    FinishTime = "06/16/2022 18:00",
+                    StartTime = "16/06/2022 13:00",
+                    FinishTime = "16/06/2022 18:00",
                     Hours = 5,
                     HoursOT = 0,
                     Notes = "Started some wiring out at the kiwi",
@@ -1633,8 +1633,8 @@ namespace _701_WebAPI.Data
                 new Job()
                 {
                     JobID = 11,
-                    StartTime = "06/18/2022 12:00",
-                    FinishTime = "06/18/2022 17:00",
+                    StartTime = "18/06/2022 12:00",
+                    FinishTime = "18/06/2022 17:00",
                     Hours = 5,
                     HoursOT = 0,
                     Notes = "Finished the wiring out at the kiwi",

@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\ExcelReports\" />
+    <Folder Include="Data\ExcelReports\ILTMaintenanceTimeSheet\" />
+    <Folder Include="Data\ExcelReports\TransactionsHOExport\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

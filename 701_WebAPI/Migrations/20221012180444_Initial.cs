@@ -289,18 +289,18 @@ namespace _701_WebAPI.Migrations
                 columns: new[] { "FinancialPeriodID", "EndDate", "Month", "StartDate", "Weeks", "Year" },
                 values: new object[,]
                 {
-                    { 1, "05/01/2022 00:00", "April", "03/27/2022 00:00", 5, 2022 },
-                    { 2, "05/29/2022 00:00", "May", "05/01/2022 00:00", 4, 2022 },
-                    { 3, "06/26/2022 00:00", "June", "05/29/2022 00:00", 4, 2022 },
-                    { 4, "07/31/2022 00:00", "July", "06/26/2022 00:00", 5, 2022 },
-                    { 5, "08/28/2022 00:00", "August", "07/31/2022 00:00", 4, 2022 },
-                    { 6, "10/02/2022 00:00", "September", "08/28/2022 00:00", 5, 2022 },
-                    { 7, "10/30/2022 00:00", "October", "10/02/2022 00:00", 4, 2022 },
-                    { 8, "11/27/2022 00:00", "November", "10/30/2022 00:00", 4, 2022 },
-                    { 9, "01/01/2023 00:00", "December", "11/27/2022 00:00", 5, 2022 },
-                    { 10, "01/29/2023 00:00", "January", "01/01/2023 00:00", 4, 2022 },
-                    { 11, "02/26/2023 00:00", "February", "01/29/2023 00:00", 4, 2022 },
-                    { 12, "04/02/2023 00:00", "March", "02/26/2023 00:00", 4, 2022 }
+                    { 1, "01/05/2022 00:00", "April", "27/03/2022 00:00", 5, 2022 },
+                    { 2, "29/05/2022 00:00", "May", "01/05/2022 00:00", 4, 2022 },
+                    { 3, "26/06/2022 00:00", "June", "29/05/2022 00:00", 4, 2022 },
+                    { 4, "31/07/2022 00:00", "July", "26/06/2022 00:00", 5, 2022 },
+                    { 5, "28/08/2022 00:00", "August", "31/07/2022 00:00", 4, 2022 },
+                    { 6, "02/10/2022 00:00", "September", "28/08/2022 00:00", 5, 2022 },
+                    { 7, "30/10/2022 00:00", "October", "02/10/2022 00:00", 4, 2022 },
+                    { 8, "27/11/2022 00:00", "November", "30/10/2022 00:00", 4, 2022 },
+                    { 9, "01/01/2023 00:00", "December", "27/11/2022 00:00", 5, 2022 },
+                    { 10, "29/01/2023 00:00", "January", "01/01/2023 00:00", 4, 2022 },
+                    { 11, "26/02/2023 00:00", "February", "29/01/2023 00:00", 4, 2022 },
+                    { 12, "02/04/2023 00:00", "March", "26/02/2023 00:00", 4, 2022 }
                 });
 
             migrationBuilder.InsertData(
@@ -308,17 +308,17 @@ namespace _701_WebAPI.Migrations
                 columns: new[] { "JobID", "AccountID", "ChargeCodeID", "EstablishmentID", "FinancialPeriodID", "FinishTime", "Hours", "HoursOT", "IsCompleted", "Notes", "StartTime" },
                 values: new object[,]
                 {
-                    { 1, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "08/29/2022 10:45", 5.25, 0.0, true, "Just started painting the entirety of south city liquorland", "08/29/2022 05:30" },
-                    { 2, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "08/29/2022 17:00", 8.0, 1.0, true, "Continued painting the entirety of south city liquorland", "08/29/2022 13:00" },
-                    { 3, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "09/15/2023 12:45", 6.75, 0.0, true, "Continued painting the entirety of south city liquorland", "09/15/2022 06:00" },
-                    { 4, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "09/17/2022 09:00", 3.0, 0.0, true, "Just finished painting the entirety of south city liquorland by myself", "09/17/2022 06:00" },
-                    { 5, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "06/13/2022 13:00", 8.0, 0.5, true, "Just finished building some chairs for waxys", "06/13/2022 05:00" },
-                    { 6, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "06/14/2022 10:00", 5.0, 0.0, true, "Just started building some tables for waxys", "06/14/2022 05:00" },
-                    { 7, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "06/15/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "06/15/2022 07:30" },
-                    { 8, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "01/04/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "01/04/2023 05:30" },
-                    { 9, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "01/06/2023 13:00", 8.0, 1.5, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "01/06/2023 05:00" },
-                    { 10, "auth0|634578296072ed94c436db3c", 1, 11, 3, "06/16/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "06/16/2022 13:00" },
-                    { 11, "auth0|634578296072ed94c436db3c", 1, 11, 3, "06/18/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "06/18/2022 12:00" }
+                    { 1, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "29/08/2022 10:45", 5.25, 0.0, true, "Just started painting the entirety of south city liquorland", "29/08/2022 05:30" },
+                    { 2, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "29/08/2022 17:00", 8.0, 1.0, true, "Continued painting the entirety of south city liquorland", "29/08/2022 13:00" },
+                    { 3, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "15/09/2022 12:45", 6.75, 0.0, true, "Continued painting the entirety of south city liquorland", "15/09/2022 06:00" },
+                    { 4, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "17/09/2022 09:00", 3.0, 0.0, true, "Just finished painting the entirety of south city liquorland by myself", "17/09/2022 06:00" },
+                    { 5, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "13/06/2022 13:00", 8.0, 0.5, true, "Just finished building some chairs for waxys", "13/06/2022 05:00" },
+                    { 6, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "14/06/2022 10:00", 5.0, 0.0, true, "Just started building some tables for waxys", "14/06/2022 05:00" },
+                    { 7, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "15/06/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "15/06/2022 07:30" },
+                    { 8, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "04/01/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "04/01/2023 05:30" },
+                    { 9, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "06/01/2023 13:00", 8.0, 1.5, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "06/01/2023 05:00" },
+                    { 10, "auth0|634578296072ed94c436db3c", 1, 11, 3, "16/06/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "16/06/2022 13:00" },
+                    { 11, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" }
                 });
 
             migrationBuilder.InsertData(
