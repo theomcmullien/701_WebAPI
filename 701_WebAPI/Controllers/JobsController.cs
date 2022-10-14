@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using _701_WebAPI.Data;
 using _701_WebAPI.Models;
 using System.Globalization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _701_WebAPI.Controllers
 {
@@ -24,6 +25,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/Jobs
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Job>>> GetJob()
         {
             if (_context.Job == null) return NotFound();
@@ -32,6 +34,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/Jobs/5
         [HttpGet("{accountID}")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Job>>> GetJob(string accountID)
         {
             if (_context.Job == null) return NotFound();
@@ -54,6 +57,7 @@ namespace _701_WebAPI.Controllers
 
         // PUT: api/Jobs/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutJob(int id, Job job)
         {
             if (id != job.JobID)
@@ -84,6 +88,7 @@ namespace _701_WebAPI.Controllers
 
         // POST: api/Jobs
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Job>> PostJob(Job job)
         {
             if (_context.Job == null || job == null) return BadRequest();
@@ -139,6 +144,7 @@ namespace _701_WebAPI.Controllers
 
         // DELETE: api/Jobs/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteJob(int id)
         {
             if (_context.Job == null)

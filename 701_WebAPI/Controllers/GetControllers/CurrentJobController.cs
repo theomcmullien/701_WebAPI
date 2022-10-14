@@ -1,5 +1,6 @@
 ﻿using _701_WebAPI.Data;
 using _701_WebAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ namespace _701_WebAPI.Controllers.GetControllers
 
         // GET: api/Jobs/5
         [HttpGet("{accountID}")]
+        [Authorize]
         public async Task<ActionResult<Job>> GetJob(string accountID)
         {
             if (_context.Job == null) return NotFound();

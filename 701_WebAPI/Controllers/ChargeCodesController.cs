@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _701_WebAPI.Data;
 using _701_WebAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _701_WebAPI.Controllers
 {
@@ -23,6 +24,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/ChargeCodes
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<ChargeCode>>> GetChargeCode()
         {
             if (_context.ChargeCode == null) return NotFound();
@@ -31,6 +33,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/ChargeCodes/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<ChargeCode>> GetChargeCode(int id)
         {
             if (_context.ChargeCode == null) return NotFound();
@@ -46,6 +49,7 @@ namespace _701_WebAPI.Controllers
 
         // PUT: api/ChargeCodes/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutChargeCode(int id, ChargeCode chargeCode)
         {
             if (id != chargeCode.ChargeCodeID)
@@ -76,6 +80,7 @@ namespace _701_WebAPI.Controllers
 
         // POST: api/ChargeCodes
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<ChargeCode>> PostChargeCode(ChargeCode chargeCode)
         {
             if (_context.ChargeCode == null) return Problem("Entity set '_701_WebAPIContext.ChargeCode'  is null.");
@@ -87,6 +92,7 @@ namespace _701_WebAPI.Controllers
 
         // DELETE: api/ChargeCodes/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteChargeCode(int id)
         {
             if (_context.ChargeCode == null)

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _701_WebAPI.Data;
 using _701_WebAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _701_WebAPI.Controllers
 {
@@ -23,6 +24,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/EstablishmentCodes
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<EstablishmentCode>>> GetEstablishmentCode()
         {
             if (_context.EstablishmentCode == null) return NotFound();
@@ -31,6 +33,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/EstablishmentCodes/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<EstablishmentCode>> GetEstablishmentCode(int id)
         {
             if (_context.EstablishmentCode == null) return NotFound();
@@ -46,6 +49,7 @@ namespace _701_WebAPI.Controllers
 
         // PUT: api/EstablishmentCodes/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutEstablishmentCode(int id, EstablishmentCode establishmentCode)
         {
             if (id != establishmentCode.EstablishmentCodeID)
@@ -76,6 +80,7 @@ namespace _701_WebAPI.Controllers
 
         // POST: api/EstablishmentCodes
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<EstablishmentCode>> PostEstablishmentCode(EstablishmentCode establishmentCode)
         {
             if (_context.EstablishmentCode == null) return NotFound();
@@ -87,6 +92,7 @@ namespace _701_WebAPI.Controllers
 
         // DELETE: api/EstablishmentCodes/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteEstablishmentCode(int id)
         {
             if (_context.EstablishmentCode == null)

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _701_WebAPI.Data;
 using _701_WebAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _701_WebAPI.Controllers
 {
@@ -23,6 +24,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/FinancialPeriods
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<FinancialPeriod>>> GetFinancialPeriod()
         {
             if (_context.FinancialPeriod == null) return NotFound();
@@ -31,6 +33,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/FinancialPeriods/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<FinancialPeriod>> GetFinancialPeriod(int id)
         {
             if (_context.FinancialPeriod == null) return NotFound();
@@ -46,6 +49,7 @@ namespace _701_WebAPI.Controllers
 
         // PUT: api/FinancialPeriods/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutFinancialPeriod(int id, FinancialPeriod financialPeriod)
         {
             if (id != financialPeriod.FinancialPeriodID)
@@ -76,6 +80,7 @@ namespace _701_WebAPI.Controllers
 
         // POST: api/FinancialPeriods
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<FinancialPeriod>> PostFinancialPeriod(FinancialPeriod financialPeriod)
         {
             if (_context.FinancialPeriod == null) return Problem("Entity set '_701_WebAPIContext.FinancialPeriod'  is null.");
@@ -87,6 +92,7 @@ namespace _701_WebAPI.Controllers
 
         // DELETE: api/FinancialPeriods/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteFinancialPeriod(int id)
         {
             if (_context.FinancialPeriod == null)

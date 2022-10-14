@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _701_WebAPI.Data;
 using _701_WebAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _701_WebAPI.Controllers
 {
@@ -23,6 +24,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/Trades
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Trade>>> GetTrade()
         {
             if (_context.Trade == null) return NotFound();
@@ -31,6 +33,7 @@ namespace _701_WebAPI.Controllers
 
         // GET: api/Trades/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<Trade>> GetTrade(int id)
         {
             if (_context.Trade == null) return NotFound();
@@ -46,6 +49,7 @@ namespace _701_WebAPI.Controllers
 
         // PUT: api/Trades/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> PutTrade(int id, Trade trade)
         {
             if (id != trade.TradeID)
@@ -76,6 +80,7 @@ namespace _701_WebAPI.Controllers
 
         // POST: api/Trades
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Trade>> PostTrade(Trade trade)
         {
             if (_context.Trade == null) return Problem("Entity set '_701_WebAPIContext.Trade'  is null.");
@@ -87,6 +92,7 @@ namespace _701_WebAPI.Controllers
 
         // DELETE: api/Trades/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteTrade(int id)
         {
             if (_context.Trade == null)

@@ -9,6 +9,7 @@ using _701_WebAPI.Data;
 using _701_WebAPI.Models;
 using _701_WebAPI.Models.Auth0;
 using _701_WebAPI.Models.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _701_WebAPI.Controllers.ReportControllers
 {
@@ -25,6 +26,7 @@ namespace _701_WebAPI.Controllers.ReportControllers
 
         // GET: api/TransactionsHOs
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult> GetTransactionsHO()
         {
             return File(Url.Content("~/Data/ExcelReports/text.xlsx"), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
