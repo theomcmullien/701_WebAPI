@@ -117,7 +117,7 @@ namespace _701_WebAPI.Controllers.GetControllers
 
                 foreach (var jList in llJobs)
                 {
-                    string date = DateTime.ParseExact(jList[0].StartTime, fmt, null).ToShortDateString();
+                    string date = DateTime.ParseExact(jList[0].StartTime, fmt, null).ToShortDateString().Replace("/", "-");
 
                     JobSheet jobSheet = new JobSheet()
                     {
@@ -143,7 +143,6 @@ namespace _701_WebAPI.Controllers.GetControllers
             if (_context.ChargeCode == null) return NotFound();
             var jobsList = await _context.Job.Where(j => j.IsCompleted).ToListAsync();
 
-            date = date.Replace("%2F", "-");
             string[] vars = date.Split("-");
             int day = int.Parse(vars[0]);
             int month = int.Parse(vars[1]);
@@ -205,32 +204,33 @@ namespace _701_WebAPI.Controllers.GetControllers
             f2.IsBold = true;
             styleBold.SetFont(f2);
 
+            string[] headings = { "Establishment", "Work Type", "Job Notes", "Standard Hours", "OT Hours" };
+            int columnCount = 5;
+            int rowCount = 0;
+
             if (rowList.Count() > 0)
             {
-                var timesheet = rowList[0];
-                IRow r1 = sheet.CreateRow(0);
+                TimeSheetRow timesheet = rowList[0];
+                IRow r1 = sheet.CreateRow(rowCount++);
                 r1.CreateCell(0).SetCellValue(timesheet.Fullname.ToUpper());
                 r1.CreateCell(1).SetCellValue(timesheet.Date);
                 r1.GetCell(0).CellStyle = style;
                 r1.GetCell(1).CellStyle = style;
             }
 
-            string[] headings = { "Establishment", "Work Type", "Job Notes", "Standard Hours", "OT Hours" };
-            IRow headingRow = sheet.CreateRow(1);
-            int columnCount = 5;
+            IRow headingRow = sheet.CreateRow(rowCount++);
             for (int i = 0; i < columnCount; i++)
             {
                 headingRow.CreateCell(i).SetCellValue(headings[i]);
                 headingRow.GetCell(i).CellStyle = styleBold;
             }
 
-            int newRow = 2;
             double? totalHours = 0;
             double? totalHoursOT = 0;
 
             foreach (TimeSheetRow item in rowList)
             {
-                IRow row = sheet.CreateRow(newRow);
+                IRow row = sheet.CreateRow(rowCount++);
 
                 row.CreateCell(0).SetCellValue(item.Establishment);
                 row.CreateCell(1).SetCellValue(item.ChargeCodeName);
@@ -241,12 +241,11 @@ namespace _701_WebAPI.Controllers.GetControllers
                 else row.CreateCell(4).SetCellValue("");
                 totalHours += item.Hours;
                 totalHoursOT += item.HoursOT;
-                newRow++;
-
+                
                 for (int i = 0; i < 5; i++) row.GetCell(i).CellStyle = style;
             }
 
-            IRow rowTotal = sheet.CreateRow(newRow);
+            IRow rowTotal = sheet.CreateRow(rowCount++);
             rowTotal.CreateCell(3).SetCellValue($"{totalHours}");
             rowTotal.CreateCell(4).SetCellValue($"{totalHoursOT}");
             rowTotal.GetCell(3).CellStyle = styleBold;

@@ -1236,6 +1236,34 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 10,
+                            AccountID = "auth0|634576856f00df75fed2d2ed",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11,
+                            FinancialPeriodID = 3,
+                            FinishTime = "11/06/2022 13:00",
+                            Hours = 7.5,
+                            HoursOT = 0.0,
+                            IsCompleted = true,
+                            Notes = "Did some plumbing out at the kiwi",
+                            StartTime = "11/06/2022 05:30"
+                        },
+                        new
+                        {
+                            JobID = 11,
+                            AccountID = "auth0|634576856f00df75fed2d2ed",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11,
+                            FinancialPeriodID = 3,
+                            FinishTime = "13/06/2022 13:00",
+                            Hours = 8.0,
+                            HoursOT = 1.5,
+                            IsCompleted = true,
+                            Notes = "Did some plumbing out at the kiw, a leaky pipe",
+                            StartTime = "13/06/2022 05:00"
+                        },
+                        new
+                        {
+                            JobID = 12,
                             AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
@@ -1249,7 +1277,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 11,
+                            JobID = 13,
                             AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,

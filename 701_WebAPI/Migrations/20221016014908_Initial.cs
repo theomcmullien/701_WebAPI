@@ -317,8 +317,10 @@ namespace _701_WebAPI.Migrations
                     { 7, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "15/06/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "15/06/2022 07:30" },
                     { 8, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "04/01/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "04/01/2023 05:30" },
                     { 9, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "06/01/2023 13:00", 8.0, 1.5, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "06/01/2023 05:00" },
-                    { 10, "auth0|634578296072ed94c436db3c", 1, 11, 3, "16/06/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "16/06/2022 13:00" },
-                    { 11, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" }
+                    { 10, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "11/06/2022 13:00", 7.5, 0.0, true, "Did some plumbing out at the kiwi", "11/06/2022 05:30" },
+                    { 11, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "13/06/2022 13:00", 8.0, 1.5, true, "Did some plumbing out at the kiw, a leaky pipe", "13/06/2022 05:00" },
+                    { 12, "auth0|634578296072ed94c436db3c", 1, 11, 3, "16/06/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "16/06/2022 13:00" },
+                    { 13, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" }
                 });
 
             migrationBuilder.InsertData(
@@ -328,10 +330,18 @@ namespace _701_WebAPI.Migrations
                 {
                     { 1, "Painter" },
                     { 2, "Carpenter" },
-                    { 3, "Plumber" },
-                    { 4, "Beer Serviceman" },
-                    { 5, "Electrican" }
+                    { 3, "Plumber" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Trade",
+                columns: new[] { "TradeID", "Type" },
+                values: new object[] { 4, "Beer Serviceman" });
+
+            migrationBuilder.InsertData(
+                table: "Trade",
+                columns: new[] { "TradeID", "Type" },
+                values: new object[] { 5, "Electrican" });
 
             migrationBuilder.InsertData(
                 table: "Trade",

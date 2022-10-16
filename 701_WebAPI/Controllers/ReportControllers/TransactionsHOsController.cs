@@ -27,7 +27,7 @@ namespace _701_WebAPI.Controllers.ReportControllers
     {
         private readonly _701_WebAPIContext _context;
 
-        static ICellStyle currencyStyle;
+        //static ICellStyle currencyStyle;
         static string fmt = "dd/MM/yyyy HH:mm";
 
         public TransactionsHOsController(_701_WebAPIContext context)
@@ -41,60 +41,51 @@ namespace _701_WebAPI.Controllers.ReportControllers
         public async Task<ActionResult<IEnumerable<TransactionsHO>>> GetTransactionsHO()
         {
             if (_context.Job == null) return NotFound();
+            if (_context.FinancialPeriod == null) return NotFound();
+
+            var fList = await _context.FinancialPeriod.ToListAsync();
 
             List<TransactionsHO> reports = new List<TransactionsHO>();
-            HashSet<string> dates = new HashSet<string>();
+            HashSet<FinancialPeriod> financialPeriods = new HashSet<FinancialPeriod>();
 
             foreach (Job j in await _context.Job.ToListAsync())
             {
                 if (j.StartTime == null) continue;
                 DateTime dt = DateTime.ParseExact(j.StartTime, fmt, null);
-                dates.Add($"{dt.Month}/{dt.Year}");
+                try
+                {
+                    financialPeriods.Add(fList.Where(f => DateTime.ParseExact(f.StartDate, fmt, null) < dt && DateTime.ParseExact(f.EndDate, fmt, null) > dt).First());
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
             }
             
-            foreach (string date in dates)
+            foreach (var f in financialPeriods)
             {
-                string[] vars = date.Split("/");
-                string month = GetMonth(int.Parse(vars[0]));
-                int year = int.Parse(vars[1]);
                 reports.Add(new TransactionsHO()
-                { 
-                    Date = date,
-                    Filename = $"Transactions HO Export - {month} {year}"
+                {
+                    FinancialPeriodID = f.FinancialPeriodID,
+                    Filename = $"Transactions HO Export - {f.Month} {f.Year}"
                 });
             }
             return reports;
         }
 
-        public static string GetMonth(int n)
-        {
-            if (n == 1) return "January";
-            else if (n == 2) return "February";
-            else if (n == 3) return "March";
-            else if (n == 4) return "April";
-            else if (n == 5) return "May";
-            else if (n == 6) return "June";
-            else if (n == 7) return "July";
-            else if (n == 8) return "August";
-            else if (n == 9) return "September";
-            else if (n == 10) return "October";
-            else if (n == 11) return "November";
-            return "December";
-        }
-
-        // GET: api/TransactionsHOs/date
-        [HttpGet("{date}")]
+        // GET: api/TransactionsHOs/5
+        [HttpGet("{financialPeriodID}")]
         [Authorize]
-        public async Task<ActionResult> GetTransactionsHO(string date)
+        public async Task<ActionResult> GetTransactionsHO(int financialPeriodID)
         {
             if (_context.Job == null) return NotFound();
+            if (_context.FinancialPeriod == null) return NotFound();
             var jobsList = await _context.Job.Where(j => j.IsCompleted).ToListAsync();
 
-            date = date.Replace("%2F", "-");
-            string[] vars = date.Split("-");
-            int month = int.Parse(vars[0]);
-            int year = int.Parse(vars[1]);
-            string filepath = $"Data/ExcelReports/TransactionsHOExport/TransactionsHOExport_{date}.xlsx";
+            var financialPeriod = await _context.FinancialPeriod.FindAsync(financialPeriodID);
+            if (financialPeriod == null) return NotFound();
+
+            string filepath = $"Data/ExcelReports/TransactionsHOExport/TransactionsHOExport_{financialPeriod.Month}_{financialPeriod.Year}.xlsx";
 
             List<Account> accounts = new List<Account>();
 
@@ -129,7 +120,7 @@ namespace _701_WebAPI.Controllers.ReportControllers
 
             foreach (Account a in accounts)
             {
-                List<Job> jobs = jobsList.Where(j => j.AccountID == a.AccountID && DateTime.ParseExact(j.StartTime, fmt, null).Month == month && DateTime.ParseExact(j.StartTime, fmt, null).Year == year).ToList();
+                List<Job> jobs = jobsList.Where(j => j.AccountID == a.AccountID && DateTime.ParseExact(j.StartTime, fmt, null) > DateTime.ParseExact(financialPeriod.StartDate, fmt, null) && DateTime.ParseExact(j.StartTime, fmt, null) < DateTime.ParseExact(financialPeriod.EndDate, fmt, null)).ToList();
                 List<List<Job>> llJobs = new List<List<Job>>();
                 foreach (Job j in jobs)
                 {
@@ -194,20 +185,21 @@ namespace _701_WebAPI.Controllers.ReportControllers
             styleBold.SetFont(f2);
 
             string[] headings = { "Date", "Standard Hours", "OT Hours", "Employee", "Amount" };
-            IRow headingRow = sheet.CreateRow(0);
             int columnCount = 5;
+            int rowCount = 0;
+
+            IRow headingRow = sheet.CreateRow(rowCount++);
             for (int i = 0; i < columnCount; i++)
             {
                 headingRow.CreateCell(i).SetCellValue(headings[i]);
                 headingRow.GetCell(i).CellStyle = styleBold;
             }
 
-            int newRow = 1;
             decimal totalAmount = 0;
 
             foreach (TransactionsHORow item in rowList)
             {
-                IRow row = sheet.CreateRow(newRow);
+                IRow row = sheet.CreateRow(rowCount++);
 
                 row.CreateCell(0).SetCellValue(item.Date);
                 if (item.Hours != 0) row.CreateCell(1).SetCellValue(item.Hours.ToString());
@@ -217,12 +209,11 @@ namespace _701_WebAPI.Controllers.ReportControllers
                 row.CreateCell(3).SetCellValue(item.Lastname.ToUpper());
                 row.CreateCell(4).SetCellValue(string.Format("${0:0.00}", item.Amount));
                 totalAmount += item.Amount;
-                newRow++;
-
+                
                 for (int i = 0; i < 5; i++) row.GetCell(i).CellStyle = style;
             }
 
-            IRow rowTotal = sheet.CreateRow(newRow);
+            IRow rowTotal = sheet.CreateRow(rowCount++);
             rowTotal.CreateCell(4).SetCellValue(string.Format("${0:0.00}", totalAmount));
             rowTotal.GetCell(4).CellStyle = styleBold;
 

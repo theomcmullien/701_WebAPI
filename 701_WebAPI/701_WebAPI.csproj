@@ -26,8 +26,12 @@
 
   <ItemGroup>
     <Folder Include="Data\ExcelReports\ILTMaintenanceTimeSheet\" />
+    <Folder Include="Data\ExcelReports\BranchManagers\" />
+    <Folder Include="Data\ExcelReports\HeadOfficeDetail\" />
+    <Folder Include="Data\ExcelReports\HeadOfficeJournal\" />
     <Folder Include="Data\ExcelReports\TransactionsHOExport\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Models\General\" />
   </ItemGroup>
 
 </Project>

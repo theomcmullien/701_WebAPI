@@ -1615,10 +1615,38 @@ namespace _701_WebAPI.Data
                     ChargeCodeID = 1,
                     AccountID = "auth0|634576856f00df75fed2d2ed",
                 },
-                /// -------------------- Brian Walker --------------------
                 new Job()
                 {
                     JobID = 10,
+                    StartTime = "11/06/2022 05:30",
+                    FinishTime = "11/06/2022 13:00",
+                    Hours = 7.5,
+                    HoursOT = 0,
+                    Notes = "Did some plumbing out at the kiwi",
+                    IsCompleted = true,
+                    FinancialPeriodID = 3,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634576856f00df75fed2d2ed",
+                },
+                new Job()
+                {
+                    JobID = 11,
+                    StartTime = "13/06/2022 05:00",
+                    FinishTime = "13/06/2022 13:00",
+                    Hours = 8,
+                    HoursOT = 1.5,
+                    Notes = "Did some plumbing out at the kiw, a leaky pipe",
+                    IsCompleted = true,
+                    FinancialPeriodID = 3,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634576856f00df75fed2d2ed",
+                },
+                /// -------------------- Brian Walker --------------------
+                new Job()
+                {
+                    JobID = 12,
                     StartTime = "16/06/2022 13:00",
                     FinishTime = "16/06/2022 18:00",
                     Hours = 5,
@@ -1632,7 +1660,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 11,
+                    JobID = 13,
                     StartTime = "18/06/2022 12:00",
                     FinishTime = "18/06/2022 17:00",
                     Hours = 5,
