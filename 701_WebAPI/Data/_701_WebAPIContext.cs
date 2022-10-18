@@ -1671,6 +1671,77 @@ namespace _701_WebAPI.Data
                     EstablishmentID = 11,
                     ChargeCodeID = 1,
                     AccountID = "auth0|634578296072ed94c436db3c",
+                },
+                new Job()
+                {
+                    JobID = 14,
+                    StartTime = "16/10/2022 13:00",
+                    FinishTime = "16/10/2022 20:00",
+                    Hours = 5,
+                    HoursOT = 2,
+                    Notes = "Finished the wiring out at the kiwi",
+                    IsCompleted = true,
+                    FinancialPeriodID = 8,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634578296072ed94c436db3c",
+                },
+                new Job()
+                {
+                    JobID = 15,
+                    StartTime = "13/11/2022 11:00",
+                    FinishTime = "13/11/2022 16:00",
+                    Hours = 3,
+                    HoursOT = 2,
+                    Notes = "Finished the wiring out at the kiwi",
+                    IsCompleted = true,
+                    FinancialPeriodID = 9,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634578296072ed94c436db3c",
+                },
+                /// -------------------- Jim Scully --------------------
+                new Job()
+                {
+                    JobID = 16,
+                    StartTime = "19/10/2022 12:00",
+                    FinishTime = "19/10/2022 17:00",
+                    Hours = 5,
+                    HoursOT = 0,
+                    Notes = "Finished the wiring out at the ascot",
+                    IsCompleted = true,
+                    FinancialPeriodID = 8,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 1,
+                    AccountID = "auth0|634577c56f00df75fed2d2fe",
+                },
+                new Job()
+                {
+                    JobID = 17,
+                    StartTime = "21/11/2022 12:00",
+                    FinishTime = "21/11/2022 19:00",
+                    Hours = 5,
+                    HoursOT = 2,
+                    Notes = "Finished the wiring out at the ascot",
+                    IsCompleted = true,
+                    FinancialPeriodID = 9,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 1,
+                    AccountID = "auth0|634577c56f00df75fed2d2fe",
+                },
+                new Job()
+                {
+                    JobID = 18,
+                    StartTime = "12/01/2023 05:00",
+                    FinishTime = "12/01/2023 10:00",
+                    Hours = 4.5,
+                    HoursOT = 0.5,
+                    Notes = "Finished the wiring out at the ascot",
+                    IsCompleted = true,
+                    FinancialPeriodID = 10,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634577c56f00df75fed2d2fe",
                 }
             );
             // -------------------------------------------------- Trade --------------------------------------------------

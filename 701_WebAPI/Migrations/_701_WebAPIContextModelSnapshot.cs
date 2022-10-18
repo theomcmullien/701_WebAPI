@@ -1288,6 +1288,76 @@ namespace _701_WebAPI.Migrations
                             IsCompleted = true,
                             Notes = "Finished the wiring out at the kiwi",
                             StartTime = "18/06/2022 12:00"
+                        },
+                        new
+                        {
+                            JobID = 14,
+                            AccountID = "auth0|634578296072ed94c436db3c",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11,
+                            FinancialPeriodID = 8,
+                            FinishTime = "16/10/2022 20:00",
+                            Hours = 5.0,
+                            HoursOT = 2.0,
+                            IsCompleted = true,
+                            Notes = "Finished the wiring out at the kiwi",
+                            StartTime = "16/10/2022 13:00"
+                        },
+                        new
+                        {
+                            JobID = 15,
+                            AccountID = "auth0|634578296072ed94c436db3c",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11,
+                            FinancialPeriodID = 9,
+                            FinishTime = "13/11/2022 16:00",
+                            Hours = 3.0,
+                            HoursOT = 2.0,
+                            IsCompleted = true,
+                            Notes = "Finished the wiring out at the kiwi",
+                            StartTime = "13/11/2022 11:00"
+                        },
+                        new
+                        {
+                            JobID = 16,
+                            AccountID = "auth0|634577c56f00df75fed2d2fe",
+                            ChargeCodeID = 1,
+                            EstablishmentID = 1,
+                            FinancialPeriodID = 8,
+                            FinishTime = "19/10/2022 17:00",
+                            Hours = 5.0,
+                            HoursOT = 0.0,
+                            IsCompleted = true,
+                            Notes = "Finished the wiring out at the ascot",
+                            StartTime = "19/10/2022 12:00"
+                        },
+                        new
+                        {
+                            JobID = 17,
+                            AccountID = "auth0|634577c56f00df75fed2d2fe",
+                            ChargeCodeID = 1,
+                            EstablishmentID = 1,
+                            FinancialPeriodID = 9,
+                            FinishTime = "21/11/2022 19:00",
+                            Hours = 5.0,
+                            HoursOT = 2.0,
+                            IsCompleted = true,
+                            Notes = "Finished the wiring out at the ascot",
+                            StartTime = "21/11/2022 12:00"
+                        },
+                        new
+                        {
+                            JobID = 18,
+                            AccountID = "auth0|634577c56f00df75fed2d2fe",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 1,
+                            FinancialPeriodID = 10,
+                            FinishTime = "12/01/2023 10:00",
+                            Hours = 4.5,
+                            HoursOT = 0.5,
+                            IsCompleted = true,
+                            Notes = "Finished the wiring out at the ascot",
+                            StartTime = "12/01/2023 05:00"
                         });
                 });
 

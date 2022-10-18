@@ -320,7 +320,19 @@ namespace _701_WebAPI.Migrations
                     { 10, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "11/06/2022 13:00", 7.5, 0.0, true, "Did some plumbing out at the kiwi", "11/06/2022 05:30" },
                     { 11, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "13/06/2022 13:00", 8.0, 1.5, true, "Did some plumbing out at the kiw, a leaky pipe", "13/06/2022 05:00" },
                     { 12, "auth0|634578296072ed94c436db3c", 1, 11, 3, "16/06/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "16/06/2022 13:00" },
-                    { 13, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" }
+                    { 13, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" },
+                    { 14, "auth0|634578296072ed94c436db3c", 2, 11, 8, "16/10/2022 20:00", 5.0, 2.0, true, "Finished the wiring out at the kiwi", "16/10/2022 13:00" },
+                    { 15, "auth0|634578296072ed94c436db3c", 2, 11, 9, "13/11/2022 16:00", 3.0, 2.0, true, "Finished the wiring out at the kiwi", "13/11/2022 11:00" },
+                    { 16, "auth0|634577c56f00df75fed2d2fe", 1, 1, 8, "19/10/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the ascot", "19/10/2022 12:00" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Job",
+                columns: new[] { "JobID", "AccountID", "ChargeCodeID", "EstablishmentID", "FinancialPeriodID", "FinishTime", "Hours", "HoursOT", "IsCompleted", "Notes", "StartTime" },
+                values: new object[,]
+                {
+                    { 17, "auth0|634577c56f00df75fed2d2fe", 1, 1, 9, "21/11/2022 19:00", 5.0, 2.0, true, "Finished the wiring out at the ascot", "21/11/2022 12:00" },
+                    { 18, "auth0|634577c56f00df75fed2d2fe", 2, 1, 10, "12/01/2023 10:00", 4.5, 0.5, true, "Finished the wiring out at the ascot", "12/01/2023 05:00" }
                 });
 
             migrationBuilder.InsertData(
@@ -330,23 +342,11 @@ namespace _701_WebAPI.Migrations
                 {
                     { 1, "Painter" },
                     { 2, "Carpenter" },
-                    { 3, "Plumber" }
+                    { 3, "Plumber" },
+                    { 4, "Beer Serviceman" },
+                    { 5, "Electrican" },
+                    { 6, "Gardener" }
                 });
-
-            migrationBuilder.InsertData(
-                table: "Trade",
-                columns: new[] { "TradeID", "Type" },
-                values: new object[] { 4, "Beer Serviceman" });
-
-            migrationBuilder.InsertData(
-                table: "Trade",
-                columns: new[] { "TradeID", "Type" },
-                values: new object[] { 5, "Electrican" });
-
-            migrationBuilder.InsertData(
-                table: "Trade",
-                columns: new[] { "TradeID", "Type" },
-                values: new object[] { 6, "Gardener" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
