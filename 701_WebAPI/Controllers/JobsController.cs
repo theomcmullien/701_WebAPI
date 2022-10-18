@@ -93,6 +93,8 @@ namespace _701_WebAPI.Controllers
         {
             if (_context.Job == null || job == null) return BadRequest();
 
+            job.StartTime = job.StartTime.Replace("-", "/");
+            job.FinishTime = job.FinishTime.Replace("-", "/");
 
             if (job.IsCompleted)
             {
