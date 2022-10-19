@@ -41,6 +41,10 @@ namespace _701_WebAPI.Controllers.ReportControllers
         {
             if (_context.Job == null) return NotFound();
             if (_context.FinancialPeriod == null) return NotFound();
+            if (_context.Establishment == null) return NotFound();
+
+            var establishment = await _context.Establishment.FindAsync(establishmentID);
+            if (establishment == null) return NotFound();
 
             var fList = await _context.FinancialPeriod.ToListAsync();
 
@@ -66,7 +70,7 @@ namespace _701_WebAPI.Controllers.ReportControllers
                 reports.Add(new BranchManager()
                 {
                     FinancialPeriodID = f.FinancialPeriodID,
-                    Filename = $"Branch Managers Report - {f.Month} {f.Year}"
+                    Filename = $"Branch Managers Report - {establishment.Name} - {f.Month} {f.Year}"
                 });
             }
             return reports;
