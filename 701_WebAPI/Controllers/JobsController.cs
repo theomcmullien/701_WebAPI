@@ -93,11 +93,16 @@ namespace _701_WebAPI.Controllers
         {
             if (_context.Job == null || job == null) return BadRequest();
 
+            if (job.StartTime == null) return NotFound();
             job.StartTime = job.StartTime.Replace("-", "/");
-            job.FinishTime = job.FinishTime.Replace("-", "/");
-
+            if (job.StartTime.Split("-")[0].Length == 1) job.StartTime = $"0{job.StartTime}";
+            
             if (job.IsCompleted)
             {
+                if (job.FinishTime == null) return NotFound();
+                job.FinishTime = job.FinishTime.Replace("-", "/");
+                if (job.FinishTime.Split("-")[0].Length == 1) job.FinishTime = $"0{job.FinishTime}";
+
                 if (_context.FinancialPeriod == null) return BadRequest();
 
                 if (job.StartTime != null && job.FinishTime != null)
