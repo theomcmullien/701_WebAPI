@@ -1543,10 +1543,24 @@ namespace _701_WebAPI.Data
                     ChargeCodeID = 1,
                     AccountID = "auth0|6332c7bb35450ad949086866",
                 },
-                /// -------------------- Wayne Dimmock --------------------
+                ///Current
                 new Job()
                 {
                     JobID = 5,
+                    StartTime = "25/10/2022 10:30",
+                    FinishTime = null,
+                    Hours = null,
+                    HoursOT = null,
+                    Notes = null,
+                    IsCompleted = false,
+                    EstablishmentID = 16,
+                    ChargeCodeID = 1,
+                    AccountID = "auth0|6332c7bb35450ad949086866",
+                },
+                /// -------------------- Wayne Dimmock --------------------
+                new Job()
+                {
+                    JobID = 6,
                     StartTime = "13/06/2022 05:00",
                     FinishTime = "13/06/2022 13:00",
                     Hours = 8,
@@ -1560,7 +1574,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 6,
+                    JobID = 7,
                     StartTime = "14/06/2022 05:00",
                     FinishTime = "14/06/2022 10:00",
                     Hours = 5,
@@ -1574,7 +1588,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 7,
+                    JobID = 8,
                     StartTime = "15/06/2022 07:30",
                     FinishTime = "15/06/2022 11:00",
                     Hours = 3.5,
@@ -1586,10 +1600,24 @@ namespace _701_WebAPI.Data
                     ChargeCodeID = 2,
                     AccountID = "auth0|634575dbe16807ccd2b3818d",
                 },
+                ///Current
+                new Job()
+                {
+                    JobID = 9,
+                    StartTime = "25/10/2022 10:30",
+                    FinishTime = null,
+                    Hours = null,
+                    HoursOT = null,
+                    Notes = null,
+                    IsCompleted = false,
+                    EstablishmentID = 15,
+                    ChargeCodeID = 1,
+                    AccountID = "auth0|634575dbe16807ccd2b3818d",
+                },
                 /// -------------------- Brent Mallon --------------------
                 new Job()
                 {
-                    JobID = 8,
+                    JobID = 10,
                     StartTime = "04/01/2023 05:30",
                     FinishTime = "04/01/2023 13:00",
                     Hours = 7.5,
@@ -1603,7 +1631,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 9,
+                    JobID = 11,
                     StartTime = "06/01/2023 05:00",
                     FinishTime = "06/01/2023 13:00",
                     Hours = 8,
@@ -1617,7 +1645,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 10,
+                    JobID = 12,
                     StartTime = "11/06/2022 05:30",
                     FinishTime = "11/06/2022 13:00",
                     Hours = 7.5,
@@ -1631,7 +1659,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 11,
+                    JobID = 13,
                     StartTime = "13/06/2022 05:00",
                     FinishTime = "13/06/2022 13:00",
                     Hours = 8,
@@ -1643,10 +1671,24 @@ namespace _701_WebAPI.Data
                     ChargeCodeID = 2,
                     AccountID = "auth0|634576856f00df75fed2d2ed",
                 },
+                ///Current
+                new Job()
+                {
+                    JobID = 14,
+                    StartTime = "25/10/2022 11:30",
+                    FinishTime = null,
+                    Hours = null,
+                    HoursOT = null,
+                    Notes = null,
+                    IsCompleted = false,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634576856f00df75fed2d2ed",
+                },
                 /// -------------------- Brian Walker --------------------
                 new Job()
                 {
-                    JobID = 12,
+                    JobID = 15,
                     StartTime = "16/06/2022 13:00",
                     FinishTime = "16/06/2022 18:00",
                     Hours = 5,
@@ -1660,7 +1702,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 13,
+                    JobID = 16,
                     StartTime = "18/06/2022 12:00",
                     FinishTime = "18/06/2022 17:00",
                     Hours = 5,
@@ -1674,7 +1716,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 14,
+                    JobID = 17,
                     StartTime = "16/10/2022 13:00",
                     FinishTime = "16/10/2022 20:00",
                     Hours = 5,
@@ -1688,7 +1730,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 15,
+                    JobID = 18,
                     StartTime = "13/11/2022 11:00",
                     FinishTime = "13/11/2022 16:00",
                     Hours = 3,
@@ -1700,10 +1742,24 @@ namespace _701_WebAPI.Data
                     ChargeCodeID = 2,
                     AccountID = "auth0|634578296072ed94c436db3c",
                 },
+                ///Current
+                new Job()
+                {
+                    JobID = 19,
+                    StartTime = "24/10/2022 08:30",
+                    FinishTime = null,
+                    Hours = null,
+                    HoursOT = null,
+                    Notes = null,
+                    IsCompleted = false,
+                    EstablishmentID = 11,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634578296072ed94c436db3c",
+                },
                 /// -------------------- Jim Scully --------------------
                 new Job()
                 {
-                    JobID = 16,
+                    JobID = 20,
                     StartTime = "19/10/2022 12:00",
                     FinishTime = "19/10/2022 17:00",
                     Hours = 5,
@@ -1717,7 +1773,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 17,
+                    JobID = 21,
                     StartTime = "21/11/2022 12:00",
                     FinishTime = "21/11/2022 19:00",
                     Hours = 5,
@@ -1731,7 +1787,7 @@ namespace _701_WebAPI.Data
                 },
                 new Job()
                 {
-                    JobID = 18,
+                    JobID = 22,
                     StartTime = "12/01/2023 05:00",
                     FinishTime = "12/01/2023 10:00",
                     Hours = 4.5,
@@ -1739,6 +1795,20 @@ namespace _701_WebAPI.Data
                     Notes = "Finished the wiring out at the ascot",
                     IsCompleted = true,
                     FinancialPeriodID = 10,
+                    EstablishmentID = 1,
+                    ChargeCodeID = 2,
+                    AccountID = "auth0|634577c56f00df75fed2d2fe",
+                },
+                ///Current
+                new Job()
+                {
+                    JobID = 23,
+                    StartTime = "24/10/2022 09:30",
+                    FinishTime = null,
+                    Hours = null,
+                    HoursOT = null,
+                    Notes = null,
+                    IsCompleted = false,
                     EstablishmentID = 1,
                     ChargeCodeID = 2,
                     AccountID = "auth0|634577c56f00df75fed2d2fe",

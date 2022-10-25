@@ -93,14 +93,12 @@ namespace _701_WebAPI.Controllers.GetControllers
                 try
                 {
                     var jobs = await _context.Job.Where(j => !j.IsCompleted && j.AccountID == a.AccountID).FirstAsync();
-                    string? establishment = await _context.Establishment.Where(e => e.EstablishmentID == jobs.EstablishmentID).Select(e => e.Name).FirstAsync();
-                    DateTime datetime = DateTime.ParseExact(jobs.StartTime, fmt, null);
                     var ec = new EmployeeCurrent()
                     {
                         Firstname = a.Firstname,
                         Lastname = a.Lastname,
-                        Location = establishment,
-                        StartTime = datetime.ToShortTimeString()
+                        Location = await _context.Establishment.Where(e => e.EstablishmentID == jobs.EstablishmentID).Select(e => e.Name).FirstAsync(),
+                        StartTime = DateTime.ParseExact(jobs.StartTime, fmt, null).ToShortTimeString()
                     };
                     employeeCurrentList.Add(ec);
                 }

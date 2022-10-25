@@ -4,7 +4,7 @@
 
 namespace _701_WebAPI.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -312,18 +312,18 @@ namespace _701_WebAPI.Migrations
                     { 2, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "29/08/2022 17:00", 8.0, 1.0, true, "Continued painting the entirety of south city liquorland", "29/08/2022 13:00" },
                     { 3, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "15/09/2022 12:45", 6.75, 0.0, true, "Continued painting the entirety of south city liquorland", "15/09/2022 06:00" },
                     { 4, "auth0|6332c7bb35450ad949086866", 1, 16, 6, "17/09/2022 09:00", 3.0, 0.0, true, "Just finished painting the entirety of south city liquorland by myself", "17/09/2022 06:00" },
-                    { 5, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "13/06/2022 13:00", 8.0, 0.5, true, "Just finished building some chairs for waxys", "13/06/2022 05:00" },
-                    { 6, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "14/06/2022 10:00", 5.0, 0.0, true, "Just started building some tables for waxys", "14/06/2022 05:00" },
-                    { 7, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "15/06/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "15/06/2022 07:30" },
-                    { 8, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "04/01/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "04/01/2023 05:30" },
-                    { 9, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "06/01/2023 13:00", 8.0, 1.5, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "06/01/2023 05:00" },
-                    { 10, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "11/06/2022 13:00", 7.5, 0.0, true, "Did some plumbing out at the kiwi", "11/06/2022 05:30" },
-                    { 11, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "13/06/2022 13:00", 8.0, 1.5, true, "Did some plumbing out at the kiw, a leaky pipe", "13/06/2022 05:00" },
-                    { 12, "auth0|634578296072ed94c436db3c", 1, 11, 3, "16/06/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "16/06/2022 13:00" },
-                    { 13, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" },
-                    { 14, "auth0|634578296072ed94c436db3c", 2, 11, 8, "16/10/2022 20:00", 5.0, 2.0, true, "Finished the wiring out at the kiwi", "16/10/2022 13:00" },
-                    { 15, "auth0|634578296072ed94c436db3c", 2, 11, 9, "13/11/2022 16:00", 3.0, 2.0, true, "Finished the wiring out at the kiwi", "13/11/2022 11:00" },
-                    { 16, "auth0|634577c56f00df75fed2d2fe", 1, 1, 8, "19/10/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the ascot", "19/10/2022 12:00" }
+                    { 5, "auth0|6332c7bb35450ad949086866", 1, 16, null, null, null, null, false, null, "25/10/2022 10:30" },
+                    { 6, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "13/06/2022 13:00", 8.0, 0.5, true, "Just finished building some chairs for waxys", "13/06/2022 05:00" },
+                    { 7, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "14/06/2022 10:00", 5.0, 0.0, true, "Just started building some tables for waxys", "14/06/2022 05:00" },
+                    { 8, "auth0|634575dbe16807ccd2b3818d", 2, 15, 4, "15/06/2022 11:00", 3.5, 0.0, true, "Just finished building some tables for waxys", "15/06/2022 07:30" },
+                    { 9, "auth0|634575dbe16807ccd2b3818d", 1, 15, null, null, null, null, false, null, "25/10/2022 10:30" },
+                    { 10, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "04/01/2023 13:00", 7.5, 0.0, true, "Did some plumbing out at the ascot", "04/01/2023 05:30" },
+                    { 11, "auth0|634576856f00df75fed2d2ed", 1, 1, 10, "06/01/2023 13:00", 8.0, 1.5, true, "Did some plumbing out at the ascot, a pipe under the sink was leaking", "06/01/2023 05:00" },
+                    { 12, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "11/06/2022 13:00", 7.5, 0.0, true, "Did some plumbing out at the kiwi", "11/06/2022 05:30" },
+                    { 13, "auth0|634576856f00df75fed2d2ed", 2, 11, 3, "13/06/2022 13:00", 8.0, 1.5, true, "Did some plumbing out at the kiw, a leaky pipe", "13/06/2022 05:00" },
+                    { 14, "auth0|634576856f00df75fed2d2ed", 2, 11, null, null, null, null, false, null, "25/10/2022 11:30" },
+                    { 15, "auth0|634578296072ed94c436db3c", 1, 11, 3, "16/06/2022 18:00", 5.0, 0.0, true, "Started some wiring out at the kiwi", "16/06/2022 13:00" },
+                    { 16, "auth0|634578296072ed94c436db3c", 1, 11, 3, "18/06/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the kiwi", "18/06/2022 12:00" }
                 });
 
             migrationBuilder.InsertData(
@@ -331,8 +331,13 @@ namespace _701_WebAPI.Migrations
                 columns: new[] { "JobID", "AccountID", "ChargeCodeID", "EstablishmentID", "FinancialPeriodID", "FinishTime", "Hours", "HoursOT", "IsCompleted", "Notes", "StartTime" },
                 values: new object[,]
                 {
-                    { 17, "auth0|634577c56f00df75fed2d2fe", 1, 1, 9, "21/11/2022 19:00", 5.0, 2.0, true, "Finished the wiring out at the ascot", "21/11/2022 12:00" },
-                    { 18, "auth0|634577c56f00df75fed2d2fe", 2, 1, 10, "12/01/2023 10:00", 4.5, 0.5, true, "Finished the wiring out at the ascot", "12/01/2023 05:00" }
+                    { 17, "auth0|634578296072ed94c436db3c", 2, 11, 8, "16/10/2022 20:00", 5.0, 2.0, true, "Finished the wiring out at the kiwi", "16/10/2022 13:00" },
+                    { 18, "auth0|634578296072ed94c436db3c", 2, 11, 9, "13/11/2022 16:00", 3.0, 2.0, true, "Finished the wiring out at the kiwi", "13/11/2022 11:00" },
+                    { 19, "auth0|634578296072ed94c436db3c", 2, 11, null, null, null, null, false, null, "24/10/2022 08:30" },
+                    { 20, "auth0|634577c56f00df75fed2d2fe", 1, 1, 8, "19/10/2022 17:00", 5.0, 0.0, true, "Finished the wiring out at the ascot", "19/10/2022 12:00" },
+                    { 21, "auth0|634577c56f00df75fed2d2fe", 1, 1, 9, "21/11/2022 19:00", 5.0, 2.0, true, "Finished the wiring out at the ascot", "21/11/2022 12:00" },
+                    { 22, "auth0|634577c56f00df75fed2d2fe", 2, 1, 10, "12/01/2023 10:00", 4.5, 0.5, true, "Finished the wiring out at the ascot", "12/01/2023 05:00" },
+                    { 23, "auth0|634577c56f00df75fed2d2fe", 2, 1, null, null, null, null, false, null, "24/10/2022 09:30" }
                 });
 
             migrationBuilder.InsertData(

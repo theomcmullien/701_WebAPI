@@ -12,8 +12,8 @@ using _701_WebAPI.Data;
 namespace _701_WebAPI.Migrations
 {
     [DbContext(typeof(_701_WebAPIContext))]
-    [Migration("20221018025817_Initial")]
-    partial class Initial
+    [Migration("20221025094956_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1168,6 +1168,15 @@ namespace _701_WebAPI.Migrations
                         new
                         {
                             JobID = 5,
+                            AccountID = "auth0|6332c7bb35450ad949086866",
+                            ChargeCodeID = 1,
+                            EstablishmentID = 16,
+                            IsCompleted = false,
+                            StartTime = "25/10/2022 10:30"
+                        },
+                        new
+                        {
+                            JobID = 6,
                             AccountID = "auth0|634575dbe16807ccd2b3818d",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
@@ -1181,7 +1190,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 6,
+                            JobID = 7,
                             AccountID = "auth0|634575dbe16807ccd2b3818d",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
@@ -1195,7 +1204,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 7,
+                            JobID = 8,
                             AccountID = "auth0|634575dbe16807ccd2b3818d",
                             ChargeCodeID = 2,
                             EstablishmentID = 15,
@@ -1209,7 +1218,16 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 8,
+                            JobID = 9,
+                            AccountID = "auth0|634575dbe16807ccd2b3818d",
+                            ChargeCodeID = 1,
+                            EstablishmentID = 15,
+                            IsCompleted = false,
+                            StartTime = "25/10/2022 10:30"
+                        },
+                        new
+                        {
+                            JobID = 10,
                             AccountID = "auth0|634576856f00df75fed2d2ed",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
@@ -1223,7 +1241,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 9,
+                            JobID = 11,
                             AccountID = "auth0|634576856f00df75fed2d2ed",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
@@ -1237,7 +1255,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 10,
+                            JobID = 12,
                             AccountID = "auth0|634576856f00df75fed2d2ed",
                             ChargeCodeID = 2,
                             EstablishmentID = 11,
@@ -1251,7 +1269,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 11,
+                            JobID = 13,
                             AccountID = "auth0|634576856f00df75fed2d2ed",
                             ChargeCodeID = 2,
                             EstablishmentID = 11,
@@ -1265,7 +1283,16 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 12,
+                            JobID = 14,
+                            AccountID = "auth0|634576856f00df75fed2d2ed",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11,
+                            IsCompleted = false,
+                            StartTime = "25/10/2022 11:30"
+                        },
+                        new
+                        {
+                            JobID = 15,
                             AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
@@ -1279,7 +1306,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 13,
+                            JobID = 16,
                             AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 1,
                             EstablishmentID = 11,
@@ -1293,7 +1320,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 14,
+                            JobID = 17,
                             AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 2,
                             EstablishmentID = 11,
@@ -1307,7 +1334,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 15,
+                            JobID = 18,
                             AccountID = "auth0|634578296072ed94c436db3c",
                             ChargeCodeID = 2,
                             EstablishmentID = 11,
@@ -1321,7 +1348,16 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 16,
+                            JobID = 19,
+                            AccountID = "auth0|634578296072ed94c436db3c",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 11,
+                            IsCompleted = false,
+                            StartTime = "24/10/2022 08:30"
+                        },
+                        new
+                        {
+                            JobID = 20,
                             AccountID = "auth0|634577c56f00df75fed2d2fe",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
@@ -1335,7 +1371,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 17,
+                            JobID = 21,
                             AccountID = "auth0|634577c56f00df75fed2d2fe",
                             ChargeCodeID = 1,
                             EstablishmentID = 1,
@@ -1349,7 +1385,7 @@ namespace _701_WebAPI.Migrations
                         },
                         new
                         {
-                            JobID = 18,
+                            JobID = 22,
                             AccountID = "auth0|634577c56f00df75fed2d2fe",
                             ChargeCodeID = 2,
                             EstablishmentID = 1,
@@ -1360,6 +1396,15 @@ namespace _701_WebAPI.Migrations
                             IsCompleted = true,
                             Notes = "Finished the wiring out at the ascot",
                             StartTime = "12/01/2023 05:00"
+                        },
+                        new
+                        {
+                            JobID = 23,
+                            AccountID = "auth0|634577c56f00df75fed2d2fe",
+                            ChargeCodeID = 2,
+                            EstablishmentID = 1,
+                            IsCompleted = false,
+                            StartTime = "24/10/2022 09:30"
                         });
                 });
 
