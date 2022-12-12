@@ -13,9 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<_701_WebAPIContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("_701_WebAPIContext")));
 
-//builder.Services.AddDbContext<_701_WebAPIContext>(options =>
-//    options.UseMySql(builder.Configuration.GetConnectionString("MySQL_701_WebAPIContext"), new MySqlServerVersion(new Version(8, 0, 22))));
-
 builder.Services.AddControllers();
 builder.Services.AddControllers().AddControllersAsServices();
 builder.Services.AddEndpointsApiExplorer();
@@ -83,11 +80,11 @@ builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>(); //Jwt
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 app.UseHttpsRedirection();
 
